@@ -129,7 +129,10 @@ const Homepage = () => {
 
 				<div className='px-10 flex gap-10 overflow-x-scroll hide-scrollbar'>
 					{Array.from(Array(10).keys()).map((i) => (
-						<section className='flex-shrink-0 max-w-lg w-full border-2 p-8 rounded-xl grid gap-10'>
+						<section
+							key={i}
+							className='flex-shrink-0 max-w-lg w-full border-2 p-8 rounded-xl grid gap-10'
+						>
 							<div className='flex items-center gap-5'>
 								<div className='h-[75px] w-[75px] bg-gray-200 rounded-full' />
 								<section className='grid gap-1'>
