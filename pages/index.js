@@ -195,6 +195,7 @@ const Homepage = () => {
 										'UAE',
 									].map((item, i) => (
 										<button
+											key={i}
 											className={`text-white px-5 py-2.5 rounded ${
 												i === 3 ? 'bg-white bg-opacity-20' : ''
 											}`}
