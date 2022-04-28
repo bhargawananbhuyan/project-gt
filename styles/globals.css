@@ -1,16 +1,35 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	@apply overflow-x-hidden;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.hide-scrollbar::-webkit-scrollbar {
+	@apply hidden;
 }
-
-* {
-  box-sizing: border-box;
+.hide-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+.landing_grid__2 {
+	@apply grid gap-8;
+	grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+	grid-auto-rows: 250px;
+}
+.landing_grid__2 section {
+	@apply p-6 rounded-2xl;
+}
+.landing_grid__3 {
+	@apply grid gap-10 justify-center;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-auto-rows: 400px;
+}
+.landing_grid__3 section {
+	@apply rounded-xl border-2;
+}
+.landing_grid__4 {
+	@apply grid gap-16 max-w-screen-2xl mx-auto;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-rows: 200px;
 }
