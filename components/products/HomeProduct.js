@@ -8,9 +8,12 @@ const HomeProduct = () => {
 	const handleMouseOut = () => setIsHovered(false)
 
 	const btnRef = React.useRef()
-	const imgRef = React.useRef()
+	// const imgRef = React.useRef()
 	React.useLayoutEffect(() => {
-		if (btnRef.current && imgRef.current) {
+		if (
+			btnRef.current
+			// && imgRef.current
+		) {
 			if (isHovered) {
 				gsap.fromTo(
 					btnRef.current,
@@ -25,20 +28,24 @@ const HomeProduct = () => {
 						duration: 0.35,
 					}
 				)
-				gsap.fromTo(
-					imgRef.current,
-					{
-						opacity: 0,
-						duration: 0.5,
-					},
-					{
-						opacity: 1,
-						duration: 0.5,
-					}
-				)
+				// gsap.fromTo(
+				// 	imgRef.current,
+				// 	{
+				// 		opacity: 0,
+				// 		duration: 0.5,
+				// 	},
+				// 	{
+				// 		opacity: 1,
+				// 		duration: 0.5,
+				// 	}
+				// )
 			}
 		}
-	}, [btnRef.current, imgRef.current, isHovered])
+	}, [
+		btnRef.current,
+		// imgRef.current,
+		isHovered,
+	])
 
 	return (
 		<div>
@@ -49,12 +56,12 @@ const HomeProduct = () => {
 				style={{ transition: '2s ease' }}
 			>
 				<div className='w-full rounded-xl bg-gray-100 h-[225px]'>
-					<img
+					{/* <img
 						ref={imgRef}
 						src={`/agri-${isHovered ? '15' : '13'}.png`}
 						width={225}
 						height={225}
-					/>
+					/> */}
 				</div>
 				<div>
 					<h3 className='text-gray-400'>Agarbatti</h3>
