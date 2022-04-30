@@ -1,4 +1,6 @@
 import Layout from '../components/layout/Layout'
+import HomeProduct from '../components/products/HomeProduct'
+import { useLayoutEffect } from 'react'
 
 const Button = ({ _type = 'contained', text, ...rest }) => (
 	<button
@@ -14,6 +16,24 @@ const Button = ({ _type = 'contained', text, ...rest }) => (
 )
 
 const Homepage = () => {
+	useLayoutEffect(() => {
+		// gsap.registerPlugin(ScrollTrigger)
+
+		const incVals = document.querySelectorAll('.inc-val')
+		// gsap.from(incVals, {
+		// 	scrollTrigger: {
+		// 		textContent: 0,
+		// 		duration: 2.5,
+		// 		ease: 'power1.in',
+		// 		snap: { textContent: 1 },
+		// 		stagger: {
+		// 			each: 1.0,
+		// 		},
+		// 		trigger: '.landing_grid__4',
+		// 	},
+		// })
+	}, [])
+
 	return (
 		<Layout>
 			<main className='grid gap-24'>
@@ -100,16 +120,7 @@ const Homepage = () => {
 
 					<div className='landing_grid__3 px-10'>
 						{Array.from(Array(8).keys()).map((i) => (
-							<section key={i} className='p-5 flex flex-col justify-between'>
-								<div className='bg-gray-200 h-[225px] w-full rounded-xl' />
-								<div>
-									<h3 className='text-gray-400'>Agarbatti</h3>
-									<h2 className='text-xl font-bold'>Royal Lavendar</h2>
-								</div>
-								<button className='w-full py-2.5 bg-red-500 text-white font-semibold rounded-lg'>
-									Lorem
-								</button>
-							</section>
+							<HomeProduct key={i} id={i} />
 						))}
 					</div>
 				</div>
@@ -153,24 +164,27 @@ const Homepage = () => {
 					{[
 						{
 							label: 'Man power',
-							value: '300+',
+							value: '300',
 						},
 						{
 							label: 'Total Utilisation',
-							value: '80%',
+							value: '80',
 						},
 						{
 							label: 'Success rate',
-							value: '100%',
+							value: '100',
 						},
 						{
 							label: "Sku's",
-							value: '75+',
+							value: '75',
 						},
 					].map((item, i) => (
 						<section key={i} className=' grid place-items-center'>
 							<div className='grid gap-5'>
-								<h1 className='text-6xl font-extrabold'>{item.value}</h1>
+								<h1 className='text-6xl font-extrabold inc-val'>
+									{item.value}
+									{i === 1 || i === 2 ? '%' : '+'}
+								</h1>
 								<p className='text-xl text-gray-400'>{item.label}</p>
 							</div>
 						</section>

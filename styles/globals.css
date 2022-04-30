@@ -21,9 +21,9 @@ body {
 	@apply p-6 rounded-2xl;
 }
 .landing_grid__3 {
-	@apply grid gap-10 justify-center;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	grid-auto-rows: 400px;
+	@apply grid gap-x-8 gap-y-16 justify-center;
+	grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+	grid-auto-rows: 350px;
 }
 .landing_grid__3 section {
 	@apply rounded-xl border-2;
