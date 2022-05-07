@@ -1,29 +1,137 @@
 import React from 'react'
+import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, footerBg = 'dark' }) => {
 	return (
 		<div>
-			<header className='max-w-screen-2xl mx-auto px-20 py-12'>
-				<div className='h-[45px] w-[45px] bg-gray-200 rotate-45' />
+			<header className='absolute left-0 top-0 w-screen z-[100]'>
+				<div className='max-w-screen-xl mx-auto py-10 flex items-center justify-between '>
+					<Link href={'/'}>
+						<a>
+							<Image
+								src={'/GT-Products-logo.png'}
+								width={75}
+								height={75}
+								className='object-contain'
+								alt=''
+							/>
+						</a>
+					</Link>
+
+					<button
+						className={`text-xl py-1 px-2.5 ${footerBg === 'light' && 'text-white'}`}
+					>
+						<FontAwesomeIcon icon={faBars} />
+					</button>
+				</div>
 			</header>
 			<main>{children}</main>
 			<footer>
+				{footerBg === 'light' ? (
+					<>
+						<div className='bg-white py-20'>
+							<div className='max-w-screen-xl mx-auto grid gap-10'>
+								<section className='grid gap-3.5 text-gray-800'>
+									<h1 className='text-4xl font-extrabold'>Contact form</h1>
+									<p className='text-lg text-gray-500'>Get in touch with us</p>
+								</section>
+
+								<form>
+									<div className='grid grid-cols-3 gap-5'>
+										<input
+											placeholder='First name'
+											className='px-5 py-3.5 border border-gray-500 rounded-lg'
+										/>
+										<input
+											placeholder='Last name'
+											className='px-5 py-3.5 border border-gray-500 rounded-lg'
+										/>
+										<input
+											placeholder='Email ID'
+											className='px-5 py-3.5 border border-gray-500 rounded-lg'
+										/>
+										<textarea
+											placeholder='Enter your message here'
+											className='resize-none col-span-3 px-5 py-3.5 border border-gray-500 rounded-lg'
+											rows={5}
+										/>
+									</div>
+
+									<button className='bg-red-500 text-white px-7 py-3.5 w-[200px] text-left rounded-lg mt-10'>
+										Submit
+									</button>
+								</form>
+							</div>
+						</div>
+						<hr className='max-w-screen-xl mx-auto border-t-2' />
+					</>
+				) : (
+					<div className=' py-20 relative'>
+						<img
+							src='/Gt_Website-20.png'
+							className='absolute w-screen h-full top-0 z-[-1]'
+							alt=''
+						/>
+						<div className='max-w-screen-xl mx-auto grid gap-10'>
+							<section className='grid gap-3.5 text-white'>
+								<h1 className='text-4xl font-extrabold'>Contact form</h1>
+								<p className='text-lg text-gray-500'>Get in touch with us</p>
+							</section>
+
+							<form>
+								<div className='grid grid-cols-3 gap-5'>
+									<input
+										placeholder='First name'
+										className='px-5 py-3.5 bg-transparent text-white border border-gray-500 rounded-lg'
+									/>
+									<input
+										placeholder='Last name'
+										className='px-5 py-3.5 bg-transparent text-white border border-gray-500 rounded-lg'
+									/>
+									<input
+										placeholder='Email ID'
+										className='px-5 py-3.5 bg-transparent text-white border border-gray-500 rounded-lg'
+									/>
+									<textarea
+										placeholder='Enter your message here'
+										className='resize-none col-span-3 px-5 py-3.5 bg-transparent text-white border border-gray-500 rounded-lg'
+										rows={5}
+									/>
+								</div>
+
+								<button className='bg-gray-500 text-white px-7 py-3.5 w-[200px] text-left rounded-lg mt-10'>
+									Submit
+								</button>
+							</form>
+						</div>
+					</div>
+				)}
 				<section className='max-w-screen-xl mx-auto py-20 grid grid-cols-3 gap-10'>
 					<div>
 						<div className='grid gap-14'>
-							<div className='h-[60px] w-[60px] bg-gray-200 rotate-45' />
+							<div className='h-[85px] w-[85px] relative'>
+								<Image
+									src={'/GT-Products-logo.png'}
+									layout='fill'
+									className='object-contain absolute'
+									alt=''
+								/>
+							</div>
 							<p className='text-lg leading-relaxed text-gray-400'>
 								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, asdsad
 								kdnvkasuydtoij kjshdg uiqnscae raeden rtae.
 							</p>
 
-							<section className='grid gap-3.5'>
+							<section className='grid gap-5'>
 								<h3 className='text-lg font-bold'>Follow us on</h3>
 								<p className='flex gap-10'>
 									{Array.from(Array(3).keys()).map((i) => (
 										<span
 											key={i}
-											className='block h-[45px] w-[45px] bg-gray-200 rounded-full'
+											className='block h-[60px] w-[60px] bg-gray-200 rounded-full'
 										/>
 									))}
 								</p>

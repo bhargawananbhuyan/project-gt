@@ -41,11 +41,7 @@ const HomeProduct = () => {
 				// )
 			}
 		}
-	}, [
-		btnRef.current,
-		// imgRef.current,
-		isHovered,
-	])
+	}, [isHovered])
 
 	return (
 		<div>
