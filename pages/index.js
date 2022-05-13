@@ -65,7 +65,7 @@ const Homepage = () => {
 						<section className='grid gap-5 place-items-start'>
 							<h2 className='text-4xl font-extrabold text-white'>Agarbatti</h2>
 							<p className='text-gray-400 text-md'>Incense sticks</p>
-							<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full'>
+							<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full z-[100]'>
 								Show all
 							</button>
 						</section>
