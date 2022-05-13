@@ -112,7 +112,7 @@ const Homepage = () => {
 				<div className='relative overflow-hidden lg:overflow-visible'>
 					<img
 						src='/Gt_Website-10.png'
-						className='max-w-sm w-full h-auto absolute -top-10 -left-32 lg:top-0 lg:left-0 opacity-25 z-[-1]'
+						className='max-w-sm w-full h-auto absolute -top-3.5 -left-32 lg:top-0 lg:left-0 opacity-10 lg:opacity-20 z-[-1]'
 						alt=''
 					/>
 					<img
