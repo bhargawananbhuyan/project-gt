@@ -72,7 +72,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 					<div className='py-20 relative bg-black bg-opacity-30'>
 						<img
 							src='/Gt_Website-20.png'
-							className='absolute w-screen h-full top-0 z-[-1]'
+							className='absolute object-cover w-screen h-full top-0 z-[-1]'
 							alt=''
 						/>
 						<div className='p_base grid gap-10'>
