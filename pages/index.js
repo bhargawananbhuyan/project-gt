@@ -2,6 +2,7 @@ import Layout from '../components/layout/Layout'
 import HomeProduct from '../components/products/HomeProduct'
 import { useLayoutEffect } from 'react'
 import Image from 'next/image'
+import NumberGrid from '../components/layout/NumberGrid'
 
 const Button = ({ _type = 'contained', text, ...rest }) => (
 	<button
@@ -36,21 +37,23 @@ const Homepage = () => {
 
 	return (
 		<Layout>
-			<main className='grid gap-24 pt-40'>
+			<main className='grid gap-24 pt-32 lg:pt-40'>
 				{/* landing section */}
-				<div className='landing_grid__2 max-w-screen-xl mx-auto w-full'>
-					<section className='col-start-1 col-span-3 row-start-1 row-span-2 bg-gray-200'>
+				<div className='banner_grid'>
+					<section className='banner_card bg-gray-200'>
 						<div className='grid place-items-center w-full h-full relative'>
 							<img
 								src='/Gt_Website-06.png'
-								className='w-full h-full object-cover absolute top-0 left-0 rounded-2xl'
+								className='w-full h-full object-cover absolute top-0 left-0 rounded-2xl opacity-50'
 								alt=''
 							/>
 							<div className='grid gap-3.5 text-center'>
 								<h3 className='text-xl text-gray-400'>One of the</h3>
 								<h2 className='text-3xl text-gray-500'>largest makers of</h2>
-								<h1 className='text-5xl font-bold'>dhoops & agarbattis</h1>
-								<div className='flex items-center justify-center gap-3.5 mt-10'>
+								<h1 className='text-4xl sm:text-5xl font-extrabold px-3.5 leading-normal sm:px-0'>
+									dhoops & agarbattis
+								</h1>
+								<div className='flex items-center justify-center gap-3.5 mt-10 z-[100]'>
 									<Button _type='outlined' text='Lorem ipsum' />
 									<Button text='Lorem ipsum' />
 								</div>
@@ -58,9 +61,9 @@ const Homepage = () => {
 						</div>
 					</section>
 
-					<section className='col-start-1 row-start-3 row-span-2 bg-gray-800 relative overflow-hidden'>
+					<section className='banner_card bg-gray-800 relative overflow-hidden'>
 						<section className='grid gap-5 place-items-start'>
-							<h2 className='text-4xl font-bold text-white'>Agarbatti</h2>
+							<h2 className='text-4xl font-extrabold text-white'>Agarbatti</h2>
 							<p className='text-gray-400 text-md'>Incense sticks</p>
 							<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full'>
 								Show all
@@ -72,12 +75,13 @@ const Homepage = () => {
 							alt=''
 						/>
 					</section>
-					<section className='col-start-2 row-start-3 bg-orange-200'>
+					<section className='banner_card bg-orange-200 overflow-hidden lg:overflow-visible'>
 						<section className='grid gap-5 place-items-start relative'>
-							<h2 className='text-4xl font-bold'>Camphor</h2>
+							<h2 className='text-4xl font-extrabold'>Camphor</h2>
 							<button className='bg-white bg-opacity-75 px-8 py-2.5 rounded-full'>
 								Show all
 							</button>
+
 							<img
 								src={'/Gt_Website-09.png'}
 								className='w-[400px] h-auto object-contain absolute -top-5 -right-20'
@@ -85,19 +89,19 @@ const Homepage = () => {
 							/>
 						</section>
 					</section>
-					<section className='col-start-2 row-start-4 bg-red-600'>
+					<section className='banner_card bg-red-600'>
 						<section className='grid gap-5 place-items-start'>
-							<h2 className='text-4xl font-bold text-white'>Sambrani cups</h2>
+							<h2 className='text-4xl font-extrabold text-white'>Sambrani cups</h2>
 							<p className='text-gray-200 text-md'>Incense sticks</p>
 							<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full'>
 								Show all
 							</button>
 						</section>
 					</section>
-					<section className='col-start-3 row-start-3 row-span-2 bg-gray-800'>
+					<section className='banner_card bg-gray-800'>
 						<section className='grid gap-2 place-items-start'>
 							<p className='text-gray-500 text-2xl'>Sambrani</p>
-							<h2 className='text-4xl font-bold text-white'>Dhoops</h2>
+							<h2 className='text-4xl font-extrabold text-white'>Dhoops</h2>
 							<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full mt-8'>
 								Show all
 							</button>
@@ -105,31 +109,31 @@ const Homepage = () => {
 					</section>
 				</div>
 
-				<div className='relative'>
+				<div className='relative overflow-hidden lg:overflow-visible'>
 					<img
 						src='/Gt_Website-10.png'
-						className='max-w-xs w-full h-auto absolute top-0 left-0 opacity-25'
+						className='max-w-sm w-full h-auto absolute -top-10 -left-32 lg:top-0 lg:left-0 opacity-25 z-[-1]'
 						alt=''
 					/>
 					<img
 						src='/Gt_Website-11.png'
-						className='max-w-xl w-full h-auto absolute right-0 -bottom-32'
+						className='max-w-xl w-full h-auto absolute -right-36 -bottom-10 lg:right-0 lg:-bottom-32 z-[-1]'
 						alt=''
 					/>
 					<div className='max-w-screen-sm mx-auto px-5'>
 						<div className='grid place-items-center text-center gap-8'>
 							<section>
-								<p className='text-md text-gray-400'>Product range</p>
-								<h2 className='text-4xl font-bold'>About us</h2>
+								<p className='text-lg text-gray-400'>Product range</p>
+								<h2 className='text-4xl font-extrabold'>About us</h2>
 							</section>
-							<p className='text-lg leading-loose text-gray-500'>
+							<p className='text-xl leading-loose text-gray-500'>
 								We manufacture a wide range of incense products including
 								Agarbathis, Dhoops, Sambrani&apos;s. With a strong lineage of good
 								quality products that is not just accepted but also revered by a
 								wide variety of users, GT is one of the most trusted and well known
 								incense brands in India.
 							</p>
-							<p className='text-lg leading-loose text-gray-500'>
+							<p className='text-xl leading-loose text-gray-500'>
 								Some of our key products have managed to establish themselves as
 								stand-alone brands too.
 							</p>
@@ -143,19 +147,19 @@ const Homepage = () => {
 				<div className='grid gap-20'>
 					<section className='text-center'>
 						<h3 className='text-xl text-gray-400'>Product range</h3>
-						<h2 className='text-4xl font-bold'>Our top sellers</h2>
+						<h2 className='text-4xl font-extrabold'>Our top sellers</h2>
 					</section>
 
-					<div className='landing_grid__3 max-w-screen-xl mx-auto'>
+					<div className='landing_grid__3'>
 						{Array.from(Array(8).keys()).map((i) => (
 							<HomeProduct key={i} id={i} />
 						))}
 					</div>
 				</div>
 
-				<div className='max-w-screen-xl mx-auto w-full relative overflow-hidden'>
+				<div className='why_us w-full relative overflow-hidden'>
 					<section className='bg-gray-100 rounded-xl grid justify-center gap-5 py-20'>
-						<h2 className='text-4xl font-bold'>Why us?</h2>
+						<h2 className='text-4xl font-extrabold'>Why us?</h2>
 						<p className='text-xl max-w-2xl leading-relaxed text-gray-400 z-[100]'>
 							Our promise is to deliver premium quality products with freshness, rich
 							aroma, long shelf life and purity.
@@ -167,20 +171,20 @@ const Homepage = () => {
 
 					<img
 						src={'/Gt_Website-14.png'}
-						className='w-[250px] h-auto absolute bottom-0'
+						className='w-[250px] h-auto absolute bottom-0 hidden lg:block'
 						alt=''
 					/>
 					<img
 						src={'/Gt_Website-16.png'}
-						className='w-[350px] h-auto absolute -bottom-24 -right-14'
+						className='w-[350px] h-auto absolute -bottom-24 -right-14 hidden lg:block'
 						alt=''
 					/>
-					<div className='absolute w-full -left-16 bottom-0 grid place-items-center'>
+					<div className='absolute w-full lg:-left-16 bottom-0 grid place-items-center'>
 						<img src={'/Gt_Website-15.png'} className='w-[300px] h-auto' alt='' />
 					</div>
 				</div>
 
-				<div className='max-w-screen-xl mx-auto flex gap-10 overflow-x-scroll hide-scrollbar'>
+				<div className='p_base flex gap-10 overflow-x-scroll hide-scrollbar'>
 					{Array.from(Array(10).keys()).map((i) => (
 						<section
 							key={i}
@@ -205,7 +209,7 @@ const Homepage = () => {
 				<div className='relative'>
 					<img
 						src='/Gt_Website-17.png'
-						className='w-[250px] h-auto absolute left-14 -top-40'
+						className='w-[200px] lg:w-[250px] h-auto absolute -left-5 lg:left-0 -top-36 lg:-top-40'
 						alt=''
 					/>
 					<img
@@ -213,35 +217,15 @@ const Homepage = () => {
 						className='w-[250px] h-auto absolute right-10 -bottom-52 z-[-1]'
 						alt=''
 					/>
-					<div className='landing_grid__4'>
-						{[
-							{
-								label: 'Man power',
-								value: '300',
-							},
-							{
-								label: 'Total Utilisation',
-								value: '80',
-							},
-							{
-								label: 'Success rate',
-								value: '100',
-							},
-							{
-								label: "Sku's",
-								value: '75',
-							},
-						].map((item, i) => (
-							<section key={i} className=' grid place-items-center'>
-								<div className='grid gap-5'>
-									<h1 className='text-6xl font-extrabold inc-val'>
-										{item.value}
-										{i === 1 || i === 2 ? '%' : '+'}
-									</h1>
-									<p className='text-xl text-gray-400'>{item.label}</p>
-								</div>
-							</section>
-						))}
+					<div className='max-w-screen-xl mx-auto'>
+						<NumberGrid
+							data={[
+								{ label: 'Man Power', value: '300', icon: '+' },
+								{ label: 'Total Utilisation', value: '80', icon: '%' },
+								{ label: "Sku's", value: '75', icon: '+' },
+								{ label: 'Success rate', value: '100', icon: '%' },
+							]}
+						/>
 					</div>
 				</div>
 
@@ -254,11 +238,11 @@ const Homepage = () => {
 								className='w-full h-auto absolute opacity-20 object-cover z-0'
 								alt=''
 							/>
-							<div className='grid place-items-center gap-12 z-[100]'>
-								<h1 className='text-4xl font-bold text-white'>
+							<div className='p_base grid place-items-center gap-12 z-[100]'>
+								<h1 className='text-4xl font-extrabold text-white text-center leading-normal'>
 									We have customers worldwide
 								</h1>
-								<div className='flex gap-5'>
+								<div className='flex flex-wrap justify-center gap-5'>
 									{[
 										'Australia',
 										'Mauritius',

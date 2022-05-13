@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 
 // font awesome
 import { config } from '@fortawesome/fontawesome-svg-core'

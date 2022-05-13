@@ -8,21 +8,21 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 	return (
 		<div>
 			<header className='absolute left-0 top-0 w-screen z-[100]'>
-				<div className='max-w-screen-xl mx-auto py-10 flex items-center justify-between '>
+				<div className='py-8 lg:py-10 flex items-center justify-between p_base'>
 					<Link href={'/'}>
 						<a>
-							<Image
+							<img
 								src={'/GT-Products-logo.png'}
-								width={75}
-								height={75}
-								className='object-contain'
+								className='w-[60px] lg:w-[75px] h-auto object-contain'
 								alt=''
 							/>
 						</a>
 					</Link>
 
 					<button
-						className={`text-xl py-1 px-2.5 ${footerBg === 'light' && 'text-white'}`}
+						className={`text-xl py-1 px-2.5 lg:mr-2.5 ${
+							footerBg === 'light' && 'text-white'
+						}`}
 					>
 						<FontAwesomeIcon icon={faBars} />
 					</button>
@@ -69,20 +69,20 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 						<hr className='max-w-screen-xl mx-auto border-t-2' />
 					</>
 				) : (
-					<div className=' py-20 relative'>
+					<div className='py-20 relative bg-black bg-opacity-30'>
 						<img
 							src='/Gt_Website-20.png'
 							className='absolute w-screen h-full top-0 z-[-1]'
 							alt=''
 						/>
-						<div className='max-w-screen-xl mx-auto grid gap-10'>
+						<div className='p_base grid gap-10'>
 							<section className='grid gap-3.5 text-white'>
 								<h1 className='text-4xl font-extrabold'>Contact form</h1>
 								<p className='text-lg text-gray-500'>Get in touch with us</p>
 							</section>
 
 							<form>
-								<div className='grid grid-cols-3 gap-5'>
+								<div className='grid md:grid-cols-3 gap-5'>
 									<input
 										placeholder='First name'
 										className='px-5 py-3.5 bg-transparent text-white border border-gray-500 rounded-lg'
@@ -97,7 +97,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 									/>
 									<textarea
 										placeholder='Enter your message here'
-										className='resize-none col-span-3 px-5 py-3.5 bg-transparent text-white border border-gray-500 rounded-lg'
+										className='resize-none md:col-span-3 px-5 py-3.5 bg-transparent text-white border border-gray-500 rounded-lg'
 										rows={5}
 									/>
 								</div>
@@ -109,7 +109,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 						</div>
 					</div>
 				)}
-				<section className='max-w-screen-xl mx-auto py-20 grid grid-cols-3 gap-10'>
+				<section className='p_base py-20 grid md:grid-cols-3 gap-10'>
 					<div>
 						<div className='grid gap-14'>
 							<div className='h-[85px] w-[85px] relative'>
@@ -172,7 +172,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 					</div>
 				</section>
 				<div className='bg-gray-200'>
-					<section className='max-w-screen-xl mx-auto py-8 flex items-center justify-between text-lg'>
+					<section className='p_base py-8 flex items-center justify-between text-lg'>
 						<h1>Designed by we3magic</h1>
 						<h1>www.we3magic.com</h1>
 					</section>
