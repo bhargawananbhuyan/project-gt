@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
+import Drawer from './Drawer'
 
 const Layout = ({ children, footerBg = 'dark' }) => {
 	return (
@@ -19,13 +20,16 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 						</a>
 					</Link>
 
-					<button
+					{/* <button
 						className={`text-xl py-1 px-2.5 lg:mr-2.5 ${
 							footerBg === 'light' && 'text-white'
 						}`}
 					>
 						<FontAwesomeIcon icon={faBars} />
-					</button>
+					</button> */}
+					<div className='relative sm:mr-3.5'>
+						<Drawer />
+					</div>
 				</div>
 			</header>
 			<main>{children}</main>

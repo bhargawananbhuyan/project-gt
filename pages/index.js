@@ -53,7 +53,7 @@ const Homepage = () => {
 								<h1 className='text-4xl sm:text-5xl font-extrabold px-3.5 leading-normal sm:px-0'>
 									dhoops & agarbattis
 								</h1>
-								<div className='flex items-center justify-center gap-3.5 mt-10 z-[100]'>
+								<div className='flex items-center justify-center gap-3.5 mt-10 z-[10]'>
 									<Button _type='outlined' text='Lorem ipsum' />
 									<Button text='Lorem ipsum' />
 								</div>
@@ -65,7 +65,7 @@ const Homepage = () => {
 						<section className='grid gap-5 place-items-start'>
 							<h2 className='text-4xl font-extrabold text-white'>Agarbatti</h2>
 							<p className='text-gray-400 text-md'>Incense sticks</p>
-							<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full z-[100]'>
+							<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full z-[10]'>
 								Show all
 							</button>
 						</section>
