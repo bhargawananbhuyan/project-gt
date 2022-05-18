@@ -110,7 +110,7 @@ const Last = () => {
 				</div>
 
 				<section className='mt-[21rem]'>
-					<div className='max-w-screen-lg mx-auto w-full'>
+					<div className='max-w-screen-xl mx-auto w-full'>
 						<NumberGrid
 							large
 							data={[
