@@ -18,7 +18,7 @@ const Drawer = () => {
 	return (
 		<Menu as={React.Fragment}>
 			<Menu.Button
-				className={`absolute -top-5 right-0 px-3.5 py-1.5 z-[200] ${
+				className={`absolute -top-5 right-0 px-3.5 py-1.5 z-[201] ${
 					open ? 'text-white' : 'text-black'
 				} hover:bg-white hover:bg-opacity-5`}
 				onClick={toggleMenu}
