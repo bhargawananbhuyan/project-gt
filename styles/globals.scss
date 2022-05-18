@@ -37,7 +37,7 @@ body {
 	grid-template-columns: repeat(auto-fill, 1fr);
 	grid-auto-rows: 250px;
 
-	@screen md {
+	@screen xl {
 		grid-auto-rows: 35vh;
 	}
 
