@@ -8,7 +8,7 @@ import Drawer from './Drawer'
 const Layout = ({ children, footerBg = 'dark' }) => {
 	return (
 		<div>
-			<header className='absolute left-0 top-0 w-screen z-[100]'>
+			<header className='fixed bg-white bg-opacity-50 backdrop-blur-md left-0 top-0 w-screen z-[100]'>
 				<div className='py-8 lg:py-10 flex items-center justify-between p_base'>
 					<Link href={'/'}>
 						<a>
@@ -65,7 +65,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 						<hr className='max-w-screen-xl mx-auto border-t-2' />
 					</>
 				) : (
-					<div className='py-20 relative bg-black bg-opacity-30'>
+					<div className='py-20 relative bg-black bg-opacity-30' id='contact'>
 						<img
 							src='/Gt_Website-20.png'
 							className='absolute object-cover w-screen h-full top-0 z-[-1]'

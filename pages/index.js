@@ -144,7 +144,7 @@ const Homepage = () => {
 					</div>
 				</div>
 
-				<div className='grid gap-20'>
+				<div className='grid gap-20' id='home-products'>
 					<section className='text-center'>
 						<h3 className='text-xl text-gray-400'>Product range</h3>
 						<h2 className='text-4xl font-extrabold'>Our top sellers</h2>
@@ -157,7 +157,7 @@ const Homepage = () => {
 					</div>
 				</div>
 
-				<div className='why_us w-full relative overflow-hidden'>
+				<div className='why_us w-full relative overflow-hidden' id='why-us'>
 					<section className='bg-gray-100 rounded-xl grid justify-center gap-5 py-20'>
 						<h2 className='text-4xl font-extrabold'>Why us?</h2>
 						<p className='text-xl max-w-2xl leading-relaxed text-gray-400 z-[100]'>
