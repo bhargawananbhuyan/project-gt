@@ -133,7 +133,9 @@ body {
 
 .products__base {
 	@apply grid;
-	grid-template-columns: 300px auto;
+	@screen lg {
+		grid-template-columns: 300px auto;
+	}
 }
 
 .products__grid {
@@ -172,5 +174,13 @@ body {
 
 	.about_footer_section {
 		@apply sm:px-3.5 text-lg grid gap-y-2.5 mt-5 sm:gap-y-5 sm:mt-10 text-gray-400;
+	}
+}
+
+.last_brands_grid {
+	@apply grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	@screen sm {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	}
 }

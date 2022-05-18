@@ -19,14 +19,6 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 							/>
 						</a>
 					</Link>
-
-					{/* <button
-						className={`text-xl py-1 px-2.5 lg:mr-2.5 ${
-							footerBg === 'light' && 'text-white'
-						}`}
-					>
-						<FontAwesomeIcon icon={faBars} />
-					</button> */}
 					<div className='relative sm:mr-3.5'>
 						<Drawer />
 					</div>
@@ -37,14 +29,14 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 				{footerBg === 'light' ? (
 					<>
 						<div className='bg-white py-20'>
-							<div className='max-w-screen-xl mx-auto grid gap-10'>
+							<div className='max-w-screen-xl mx-auto grid gap-10 p_base'>
 								<section className='grid gap-3.5 text-gray-800'>
 									<h1 className='text-4xl font-extrabold'>Contact form</h1>
 									<p className='text-lg text-gray-500'>Get in touch with us</p>
 								</section>
 
 								<form>
-									<div className='grid grid-cols-3 gap-5'>
+									<div className='grid md:grid-cols-3 gap-5'>
 										<input
 											placeholder='First name'
 											className='px-5 py-3.5 border border-gray-500 rounded-lg'
@@ -59,7 +51,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 										/>
 										<textarea
 											placeholder='Enter your message here'
-											className='resize-none col-span-3 px-5 py-3.5 border border-gray-500 rounded-lg'
+											className='resize-none md:col-span-3 px-5 py-3.5 border border-gray-500 rounded-lg'
 											rows={5}
 										/>
 									</div>
