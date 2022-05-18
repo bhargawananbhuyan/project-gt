@@ -124,7 +124,10 @@ body {
 
 .number__grid {
 	@apply grid w-full justify-items-center gap-y-16;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	@screen xl {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
 }
 
 .base-grid {
