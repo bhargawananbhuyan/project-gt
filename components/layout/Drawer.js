@@ -18,7 +18,7 @@ const Drawer = () => {
 	return (
 		<Menu as={React.Fragment}>
 			<Menu.Button
-				className={`absolute -top-5 right-0 px-3.5 py-1.5 z-[300] ${
+				className={`absolute -top-5 right-0 px-3.5 py-1.5 z-[200] ${
 					open ? 'text-white' : 'text-black'
 				} hover:bg-white hover:bg-opacity-5`}
 				onClick={toggleMenu}
@@ -28,7 +28,7 @@ const Drawer = () => {
 			<Transition show={open}>
 				<Menu.Items
 					static
-					className='fixed top-0 right-0 bg-black bg-opacity-95 text-white flex flex-col h-screen w-[350px] sm:w-1/2 z-[100] p-10 pt-32 sm:pt-10 sm:p-20 gap-8 sm:gap-10 items-end sm:justify-end'
+					className='fixed top-0 right-0 bg-black bg-opacity-95 text-white flex flex-col h-screen w-[350px] sm:w-1/2 z-[200] p-10 pt-32 sm:pt-10 sm:p-20 gap-8 sm:gap-10 items-end sm:justify-end'
 				>
 					<div className='grid gap-5 absolute top-5 left-5 sm:top-10 sm:left-10'>
 						{[faFacebookF, faTwitter, faInstagram, faLinkedinIn].map((item, i) => (
@@ -68,7 +68,10 @@ const Drawer = () => {
 					].map((item, i) => (
 						<Menu.Item key={i}>
 							<Link href={item.link}>
-								<a className='text-xl lg:text-2xl opacity-60 text-right'>
+								<a
+									className='text-xl lg:text-2xl opacity-60 text-right'
+									onClick={() => setOpen(false)}
+								>
 									{item.title}
 								</a>
 							</Link>

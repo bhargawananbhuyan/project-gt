@@ -160,11 +160,11 @@ const Homepage = () => {
 				<div className='why_us w-full relative overflow-hidden' id='why-us'>
 					<section className='bg-gray-100 rounded-xl grid justify-center gap-5 py-20'>
 						<h2 className='text-4xl font-extrabold'>Why us?</h2>
-						<p className='text-xl max-w-2xl leading-relaxed text-gray-400 z-[100]'>
+						<p className='text-xl max-w-2xl leading-relaxed text-gray-400 z-[1]'>
 							Our promise is to deliver premium quality products with freshness, rich
 							aroma, long shelf life and purity.
 						</p>
-						<button className='justify-self-start bg-gray-800 text-white px-7 py-3.5 rounded-xl font-semibold mt-5 z-[100] shadow-xl hover:shadow-none transition-all'>
+						<button className='justify-self-start bg-gray-800 text-white px-7 py-3.5 rounded-xl font-semibold mt-5 z-[1] shadow-xl hover:shadow-none transition-all'>
 							Lorem ipsum
 						</button>
 					</section>
@@ -238,7 +238,7 @@ const Homepage = () => {
 								className='w-full h-auto absolute opacity-20 object-cover z-0'
 								alt=''
 							/>
-							<div className='p_base grid place-items-center gap-12 z-[100]'>
+							<div className='p_base grid place-items-center gap-12 z-[1]'>
 								<h1 className='text-4xl font-extrabold text-white text-center leading-normal'>
 									We have customers worldwide
 								</h1>
