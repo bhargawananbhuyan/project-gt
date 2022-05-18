@@ -6,7 +6,7 @@ import NumberGrid from '../components/layout/NumberGrid'
 const About = () => {
 	return (
 		<Layout>
-			<div className='relative'>
+			<div className='relative px-5 md:px-0'>
 				<Image
 					src={'/Gt_Website-22.png'}
 					layout='fill'
@@ -14,7 +14,7 @@ const About = () => {
 					alt=''
 				/>
 				<section className='max-w-lg mx-auto grid place-items-center text-center gap-y-5 py-56'>
-					<h1 className='text-4xl font-bold'>About us</h1>
+					<h1 className='text-4xl font-extrabold'>About us</h1>
 					<p className='text-lg leading-loose text-gray-400'>
 						The manufacturing division was started as a vision of our father Late shri.
 						Kanti Doshi, to provide steady income to economically backward class
@@ -34,9 +34,9 @@ const About = () => {
 					className='absolute object-cover z-[-1]'
 					alt=''
 				/>
-				<div className='py-32 grid gap-y-20'>
+				<div className='py-32 grid gap-y-24 px-5 md:px-0'>
 					<section className='max-w-screen-sm mx-auto text-center grid gap-y-5'>
-						<h1 className='text-4xl font-bold leading-relaxed'>
+						<h1 className='text-3xl md:text-4xl font-extrabold leading-relaxed'>
 							One of the largest manufacturer of Sambrani Dhoops & Agarbathi&apos;s
 						</h1>
 						<p className='text-lg leading-loose text-gray-300'>
@@ -48,7 +48,7 @@ const About = () => {
 							brands too.
 						</p>
 					</section>
-					<div className='max-w-screen-lg mx-auto w-full'>
+					<div className='max-w-screen-xl mx-auto w-full'>
 						<NumberGrid
 							data={[
 								{ label: 'Man Power', value: '300', icon: '+' },
@@ -61,12 +61,12 @@ const About = () => {
 				</div>
 			</div>
 
-			<div className='grid place-items-center gap-y-20 py-20'>
+			<div className='grid place-items-center gap-y-20 py-20 px-5 md:px-0'>
 				<section className='max-w-screen-lg mx-auto'>
 					<img src='/Gt_Website-24.png' className='object-contain w-full h-auto' alt='' />
 				</section>
 				<section className='max-w-lg mx-auto text-center grid gap-y-5 place-items-center'>
-					<h1 className='text-4xl font-bold'>Our Mission & Vision</h1>
+					<h1 className='text-3xl md:text-4xl font-extrabold'>Our Mission & Vision</h1>
 					<p className='text-lg leading-loose text-gray-400'>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
 						nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
@@ -80,9 +80,9 @@ const About = () => {
 				</section>
 			</div>
 
-			<div className='max-w-screen-xl mx-auto base-grid auto-rows-[475px] gap-10'>
+			<div className='max-w-screen-xl mx-auto base-grid auto-rows-[475px] gap-10 px-5'>
 				<section className='bg-[#262626] px-10 py-14 text-white rounded-xl'>
-					<h2 className='text-3xl font-bold'>Agarbathi</h2>
+					<h2 className='text-2xl md:text-3xl font-extrabold'>Agarbathi</h2>
 					<p className='text-white text-opacity-60 leading-loose mt-5'>
 						With a team of experienced hands, we have multiple units to manufacture both
 						dipped (branded) bathis and raw Agarbathi&apos;s for trade.
@@ -92,8 +92,8 @@ const About = () => {
 					</button>
 				</section>
 				<section className='bg-gradient-to-r from-[#ff5a45] to-[#fb7c4b] px-10 py-14 text-white rounded-xl'>
-					<h2 className='text-3xl font-bold'>
-						Sambrani <br /> dhoop - cups
+					<h2 className='text-2xl md:text-3xl font-extrabold'>
+						Sambrani <br className='hidden lg:block' /> dhoop - cups
 					</h2>
 					<p className='text-white text-opacity-75 leading-loose mt-5'>
 						With an experience of over 2 decades and a plant capacity of 100 Mts/month.
@@ -103,8 +103,8 @@ const About = () => {
 						Show all
 					</button>
 				</section>
-				<section className='bg-[#d82a44] px-10 py-14 text-white rounded-xl'>
-					<h2 className='text-3xl font-bold'>Polymers</h2>
+				<section className='bg-[#d82a44] sm:col-span-2 xl:col-span-1 px-10 py-14 text-white rounded-xl'>
+					<h2 className='text-2xl md:text-3xl font-extrabold'>Polymers</h2>
 					<p className='text-white text-opacity-60 leading-loose mt-5'>
 						We have world class machinery, capable of printing complex job of 8 colours,
 						along with supplying in various forms as per client needs.
@@ -116,17 +116,15 @@ const About = () => {
 			</div>
 
 			<div className='relative'>
-				<div className='w-full h-[1px] bg-[#bf9f7f] absolute left-0 top-[7.15rem] z-[-1]' />
-				<div className='base-grid max-w-screen-xl mx-auto pt-24 pb-20'>
-					<h1 className='self-center text-4xl font-bold leading-snug'>
-						Our <br /> brands
+				<div className='hidden md:block w-full h-[1px] bg-[#bf9f7f] absolute left-0 top-[7.15rem] z-[-1]' />
+				<div className='about_footer_grid'>
+					<h1 className='self-center text-4xl font-extrabold leading-snug'>
+						Our <br className='hidden md:block' /> brands
 					</h1>
 
 					<section>
-						<h2 className='text-3xl font-bold text-[#bf9f7f] bg-white inline-block px-3.5'>
-							Dhoops
-						</h2>
-						<div className='px-3.5 text-lg grid gap-y-5 mt-10 text-gray-400'>
+						<h2>Dhoops</h2>
+						<div className='about_footer_section'>
 							{[
 								'Five star',
 								'Gold',
@@ -143,10 +141,8 @@ const About = () => {
 					</section>
 
 					<section>
-						<h2 className='text-3xl font-bold bg-white inline-block px-3.5 text-[#bf9f7f]'>
-							Cups
-						</h2>
-						<div className='px-3.5 text-lg grid gap-y-5 mt-10 text-gray-400'>
+						<h2>Cups</h2>
+						<div className='about_footer_section'>
 							{[
 								'Flower pot',
 								'Black pearl',
@@ -162,10 +158,8 @@ const About = () => {
 					</section>
 
 					<section>
-						<h2 className='text-3xl font-bold bg-white inline-block px-3.5 shadow-[0px_0px_20px_-5px] shadow-white text-[#bf9f7f]'>
-							Agarbathis
-						</h2>
-						<div className='px-3.5 text-lg grid gap-y-5 mt-10 text-gray-400'>
+						<h2>Agarbathis</h2>
+						<div className='about_footer_section'>
 							{[
 								'Sai Ashirwad',
 								'Sugam',
@@ -191,8 +185,8 @@ const About = () => {
 				/>
 			</div>
 
-			<div className='base-grid auto-rows-[300px]'>
-				{Array.from(Array(10).keys()).map((i) => (
+			<div className='grid sm:grid-cols-2 lg:grid-cols-4 auto-rows-[300px]'>
+				{Array.from(Array(8).keys()).map((i) => (
 					<section
 						key={i}
 						className='outline outline-1 outline-gray-300 bg-gray-100'

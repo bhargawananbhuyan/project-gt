@@ -152,3 +152,21 @@ body {
 .p_base {
 	@include basePadding();
 }
+
+.about_footer_grid {
+	@apply grid gap-8 text-center md:text-left md:gap-0 max-w-screen-xl mx-auto pt-24 pb-20 px-5 md:px-0;
+	@screen md {
+		@apply flex justify-evenly;
+	}
+	@screen xl {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+	h2 {
+		@apply text-3xl font-extrabold text-[#bf9f7f] bg-white inline-block sm:px-3.5;
+	}
+
+	.about_footer_section {
+		@apply sm:px-3.5 text-lg grid gap-y-2.5 mt-5 sm:gap-y-5 sm:mt-10 text-gray-400;
+	}
+}
