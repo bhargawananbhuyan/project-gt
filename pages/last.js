@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
-import Image from 'next/image'
 import NumberGrid from '../components/layout/NumberGrid'
 
 const Last = () => {

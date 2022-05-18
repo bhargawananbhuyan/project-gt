@@ -1,8 +1,6 @@
-import React from 'react'
 import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
+import React from 'react'
 import Drawer from './Drawer'
 
 const Layout = ({ children, footerBg = 'dark' }) => {
