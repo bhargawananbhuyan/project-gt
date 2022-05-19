@@ -27,7 +27,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 				{footerBg === 'light' ? (
 					<>
 						<div className='bg-white py-20'>
-							<div className='max-w-screen-xl mx-auto grid gap-10 p_base'>
+							<div className='grid gap-10 p_base'>
 								<section className='grid gap-3.5 text-gray-800'>
 									<h1 className='text-4xl font-extrabold'>Contact form</h1>
 									<p className='text-lg text-gray-500'>Get in touch with us</p>
