@@ -154,7 +154,7 @@ body {
 .why_us {
 	@include basePadding();
 	& section {
-		@apply p-10;
+		@apply p-20;
 	}
 }
 

@@ -37,7 +37,7 @@ const Homepage = () => {
 
 	return (
 		<Layout>
-			<main className='grid gap-24 pt-32 lg:pt-40'>
+			<main className='grid gap-28 pt-32 lg:pt-40'>
 				{/* landing section */}
 				<div className='banner_grid'>
 					<section className='banner_card bg-gray-200'>
@@ -158,9 +158,9 @@ const Homepage = () => {
 				</div>
 
 				<div className='why_us w-full relative overflow-hidden' id='why-us'>
-					<section className='bg-gray-100 rounded-xl grid justify-center gap-5 py-20'>
+					<section className='bg-gray-100 rounded-xl grid justify-center gap-5'>
 						<h2 className='text-4xl font-extrabold'>Why us?</h2>
-						<p className='text-xl max-w-2xl leading-relaxed text-gray-400 z-[1]'>
+						<p className='text-xl max-w-2xl leading-loose text-gray-400 z-[1]'>
 							Our promise is to deliver premium quality products with freshness, rich
 							aroma, long shelf life and purity.
 						</p>
@@ -176,10 +176,10 @@ const Homepage = () => {
 					/>
 					<img
 						src={'/Gt_Website-16.png'}
-						className='w-[350px] h-auto absolute -bottom-24 -right-14 hidden lg:block'
+						className='w-[350px] h-auto absolute -bottom-24 right-32 hidden lg:block'
 						alt=''
 					/>
-					<div className='absolute w-full lg:-left-16 bottom-0 grid place-items-center'>
+					<div className='absolute w-full lg:-left-10 bottom-0 grid place-items-center'>
 						<img src={'/Gt_Website-15.png'} className='w-[300px] h-auto' alt='' />
 					</div>
 				</div>
@@ -197,7 +197,7 @@ const Homepage = () => {
 									<p className='text-gray-400'>Agarbatti</p>
 								</section>
 							</div>
-							<p className='text-lg text-gray-400 leading-relaxed'>
+							<p className='text-lg text-gray-400 leading-loose'>
 								&quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
 								diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
 								erat nummy nibh euismod tincidunt ut&quot;
@@ -209,7 +209,7 @@ const Homepage = () => {
 				<div className='relative'>
 					<img
 						src='/Gt_Website-17.png'
-						className='w-[200px] lg:w-[250px] h-auto absolute -left-5 lg:left-0 -top-36 lg:-top-40'
+						className='w-[200px] lg:w-[250px] h-auto absolute -left-5 lg:left-24 -top-36 lg:-top-40'
 						alt=''
 					/>
 					<img

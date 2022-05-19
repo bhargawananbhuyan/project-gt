@@ -103,9 +103,9 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 						</div>
 					</div>
 				)}
-				<section className='p_base py-20 grid md:grid-cols-3 gap-10'>
+				<section className='p_base py-20 grid md:grid-cols-3 gap-14'>
 					<div>
-						<div className='grid gap-14'>
+						<div className='grid gap-10'>
 							<div className='h-[85px] w-[85px] relative'>
 								<Image
 									src={'/GT-Products-logo.png'}
@@ -114,13 +114,13 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 									alt=''
 								/>
 							</div>
-							<p className='text-lg leading-relaxed text-gray-400'>
+							<p className='text-xl leading-loose text-gray-400'>
 								Lorem ipsum dolor sit amet, consectetuer adipiscing elit, asdsad
 								kdnvkasuydtoij kjshdg uiqnscae raeden rtae.
 							</p>
 
 							<section className='grid gap-5'>
-								<h3 className='text-lg font-bold'>Follow us on</h3>
+								<h3 className='text-xl font-bold'>Follow us on</h3>
 								<p className='flex gap-10'>
 									{Array.from(Array(3).keys()).map((i) => (
 										<span
