@@ -8,7 +8,7 @@
 		@apply px-10;
 	}
 	@screen xl {
-		@apply px-16;
+		@apply px-24;
 	}
 }
 
@@ -33,7 +33,7 @@ body {
 .banner_grid {
 	@include basePadding();
 
-	@apply grid gap-8;
+	@apply grid gap-8 max-w-screen-2xl mx-auto w-full;
 	grid-template-columns: repeat(auto-fill, 1fr);
 	grid-auto-rows: 250px;
 
