@@ -4,7 +4,6 @@ import Layout from '../components/layout/Layout'
 import NumberGrid from '../components/layout/NumberGrid'
 import TestimonialCarousel from '../components/layout/TestimonialCarousel'
 import HomeProduct from '../components/products/HomeProduct'
-import CountUp from 'react-countup'
 
 const Button = ({ _type = 'contained', text, ...rest }) => (
 	<button
@@ -45,7 +44,7 @@ const Homepage = () => {
 										</h2>
 										<h1 className='text-4xl sm:text-5xl font-extrabold px-3.5 leading-normal sm:px-0'>
 											dhoops & agarbattis
-											<CountUp end={100} />
+											<CountUp />
 										</h1>
 										<div className='flex flex-col sm:flex-row items-center justify-center gap-3.5 mt-10 z-[10]'>
 											<Button _type='outlined' text='Lorem ipsum' />

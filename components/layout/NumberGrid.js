@@ -16,10 +16,9 @@ const CountUpNum = ({ end, suffix, large }) => {
 	const [display, setDisplay] = useState(false)
 
 	useEffect(() => {
-		if (ref.current) {
-			io({ setDisplay }).observe(ref.current)
-		}
-	}, [ref, setDisplay, io])
+		if (!ref.current) return
+		io({ setDisplay }).observe(ref.current)
+	}, [ref, setDisplay])
 
 	return (
 		<div ref={ref}>
