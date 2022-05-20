@@ -1,37 +1,28 @@
-import { useRef, useEffect, useState } from 'react'
+import { useState } from 'react'
 import CountUp from 'react-countup'
-
-const io = ({ setDisplay }) =>
-	new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.intersectionRatio > 0) {
-				setDisplay(true)
-				console.log(entry)
-			}
-		})
-	})
+import ReactVisibilitySensor from 'react-visibility-sensor'
 
 const CountUpNum = ({ end, suffix, large }) => {
-	const ref = useRef()
-	const [display, setDisplay] = useState(false)
-
-	useEffect(() => {
-		if (!ref.current) return
-		io({ setDisplay }).observe(ref.current)
-	}, [ref, setDisplay])
+	const [focus, setFocus] = useState(false)
 
 	return (
-		<div ref={ref}>
-			{display && (
-				<CountUp end={end} suffix={suffix}>
-					{({ countUpRef }) => (
+		<div>
+			<CountUp start={focus ? null : 0} end={end} suffix={suffix}>
+				{({ countUpRef }) => (
+					<ReactVisibilitySensor
+						active={!focus}
+						onChange={(isVisible) => {
+							if (isVisible) setFocus(true)
+						}}
+						delayedCall
+					>
 						<h1
 							ref={countUpRef}
 							className={`${large ? 'text-6xl' : 'text-5xl'} font-extrabold`}
 						/>
-					)}
-				</CountUp>
-			)}
+					</ReactVisibilitySensor>
+				)}
+			</CountUp>
 		</div>
 	)
 }

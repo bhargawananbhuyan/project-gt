@@ -23,6 +23,7 @@
 		"react-countup": "^6.2.0",
 		"react-dom": "18.1.0",
 		"react-gsap": "^3.2.1",
+		"react-visibility-sensor": "^5.1.1",
 		"sass": "^1.51.0"
 	},
 	"devDependencies": {
