@@ -10,7 +10,7 @@ const HomeProduct = () => {
 
 	const btnRef = React.useRef()
 	// const imgRef = React.useRef()
-	React.useLayoutEffect(() => {
+	React.useEffect(() => {
 		if (
 			btnRef.current
 			// && imgRef.current

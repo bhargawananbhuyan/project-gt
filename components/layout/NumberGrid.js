@@ -1,22 +1,24 @@
-import { useRef, useLayoutEffect, useState } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import CountUp from 'react-countup'
+
+const io = ({ setDisplay }) =>
+	new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.intersectionRatio > 0) {
+				setDisplay(true)
+			}
+		})
+	})
 
 const CountUpNum = ({ end, suffix, large }) => {
 	const ref = useRef()
 	const [display, setDisplay] = useState(false)
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (ref.current) {
-			const io = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					if (entry.intersectionRatio > 0) {
-						setDisplay(true)
-					}
-				})
-			})
-			io.observe(ref.current)
+			io({ setDisplay }).observe(ref.current)
 		}
-	}, [ref, setDisplay])
+	}, [ref, setDisplay, io])
 
 	return (
 		<div ref={ref}>
