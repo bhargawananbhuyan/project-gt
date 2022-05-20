@@ -51,10 +51,10 @@ const About = () => {
 					<div className='max-w-screen-xl mx-auto w-full'>
 						<NumberGrid
 							data={[
-								{ label: 'Man Power', value: '300', icon: '+' },
-								{ label: 'Total Utilisation', value: '80', icon: '%' },
-								{ label: "Sku's", value: '75', icon: '+' },
-								{ label: 'Success rate', value: '100', icon: '%' },
+								{ label: 'Man Power', value: 300, icon: '+' },
+								{ label: 'Total Utilisation', value: 80, icon: '%' },
+								{ label: "Sku's", value: 75, icon: '+' },
+								{ label: 'Success rate', value: 100, icon: '%' },
 							]}
 						/>
 					</div>
@@ -62,7 +62,7 @@ const About = () => {
 			</div>
 
 			<div className='grid place-items-center gap-y-20 py-20 px-5 md:px-0'>
-				<section className='max-w-screen-lg mx-auto'>
+				<section className='max-w-screen-sm mx-auto'>
 					<img src='/Gt_Website-24.png' className='object-contain w-full h-auto' alt='' />
 				</section>
 				<section className='max-w-lg mx-auto text-center grid gap-y-5 place-items-center'>
