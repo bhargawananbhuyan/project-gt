@@ -16,7 +16,7 @@ const CountUpNum = ({ end, suffix, large }) => {
 			})
 			io.observe(ref.current)
 		}
-	}, [ref])
+	}, [ref, setDisplay])
 
 	return (
 		<div ref={ref}>

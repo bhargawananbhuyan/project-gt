@@ -8,11 +8,10 @@ import { TextPlugin } from 'gsap/dist/TextPlugin'
 import Fade from './Fade'
 
 const Layout = ({ children, footerBg = 'dark' }) => {
+	gsap.registerPlugin(TextPlugin)
 	const [scrolled, setScrolled] = React.useState(false)
 
 	React.useLayoutEffect(() => {
-		gsap.registerPlugin(TextPlugin)
-
 		if (window !== undefined) {
 			window?.document?.addEventListener('scroll', () => {
 				setScrolled(window?.document?.documentElement.scrollTop > 0)
