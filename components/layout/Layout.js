@@ -20,7 +20,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 	}, [])
 
 	return (
-		<div>
+		<div className='app'>
 			<header
 				className={`fixed ${
 					scrolled ? 'bg-white bg-opacity-30 backdrop-blur-md' : ''
