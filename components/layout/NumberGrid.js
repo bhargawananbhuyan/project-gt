@@ -24,7 +24,7 @@ const CountUpNum = ({ end, suffix, large }) => {
 	return (
 		<div ref={ref}>
 			{display && (
-				<CountUp start={0} end={end} suffix={suffix}>
+				<CountUp end={end} suffix={suffix}>
 					{({ countUpRef }) => (
 						<h1
 							ref={countUpRef}
