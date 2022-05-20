@@ -89,7 +89,9 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 								</Fade>
 							</div>
 						</div>
-						<hr className='max-w-screen-xl mx-auto border-t-2' />
+						<div className='p_base'>
+							<hr className='border-t-2' />
+						</div>
 					</>
 				) : (
 					<div className='py-20 relative bg-black bg-opacity-30'>
