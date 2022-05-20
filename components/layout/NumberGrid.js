@@ -6,6 +6,7 @@ const io = ({ setDisplay }) =>
 		entries.forEach((entry) => {
 			if (entry.intersectionRatio > 0) {
 				setDisplay(true)
+				console.log(entry)
 			}
 		})
 	})
