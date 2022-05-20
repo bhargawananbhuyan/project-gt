@@ -1,12 +1,9 @@
-import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { ScrollTrigger, Tween } from 'react-gsap'
 import Layout from '../components/layout/Layout'
-// import NumberGrid from '../components/layout/NumberGrid'
+import NumberGrid from '../components/layout/NumberGrid'
 import TestimonialCarousel from '../components/layout/TestimonialCarousel'
 import HomeProduct from '../components/products/HomeProduct'
-
-const NumberGrid = dynamic(() => import('../components/layout/NumberGrid'), { ssr: false })
 
 const Button = ({ _type = 'contained', text, ...rest }) => (
 	<button
