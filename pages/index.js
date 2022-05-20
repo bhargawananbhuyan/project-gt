@@ -21,7 +21,7 @@ const Button = ({ _type = 'contained', text, ...rest }) => (
 const Homepage = () => {
 	return (
 		<Layout>
-			<main className='grid gap-28 pt-32'>
+			<main className='grid gap-28 pt-24 lg:pt-28'>
 				{/* landing section */}
 				<div className='banner_grid'>
 					<ScrollTrigger start='top center' end='bottom center'>
