@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { ScrollTrigger, Tween } from 'react-gsap'
+import Fade from '../components/layout/Fade'
 import Layout from '../components/layout/Layout'
 import NumberGrid from '../components/layout/NumberGrid'
 import TestimonialCarousel from '../components/layout/TestimonialCarousel'
@@ -7,11 +8,10 @@ import HomeProduct from '../components/products/HomeProduct'
 
 const Button = ({ _type = 'contained', text, ...rest }) => (
 	<button
-		className={`${
-			_type === 'contained'
-				? 'border border-gray-800 bg-gray-800 text-white'
-				: 'border border-gray-800'
-		} rounded-lg px-8 py-3.5 font-semibold`}
+		className={`${_type === 'contained'
+			? 'border border-gray-800 bg-gray-800 text-white'
+			: 'border border-gray-800'
+			} rounded-lg px-5 sm:px-8 py-3.5 font-semibold`}
 		{...rest}
 	>
 		{text}
@@ -21,44 +21,43 @@ const Button = ({ _type = 'contained', text, ...rest }) => (
 const Homepage = () => {
 	return (
 		<Layout>
-			<main className='grid gap-28 pt-24 lg:pt-28'>
+			<main className='grid gap-24 lg:gap-28 pt-24 lg:pt-28'>
 				{/* landing section */}
 				<div className='banner_grid'>
-					<ScrollTrigger start='top center' end='bottom center'>
-						<Tween
-							from={{ y: '-100px', opacity: '0' }}
-							duration={1.5}
-							to={{ y: '0px', opacity: '1' }}
-						>
-							<section id='banner-1' className='banner_card bg-gray-200'>
-								<div className='grid place-items-center w-full h-full relative'>
-									<img
-										src='/Gt_Website-06.png'
-										className='w-full h-full object-cover absolute top-0 left-0 rounded-2xl opacity-50'
-										alt=''
-									/>
-									<div className='grid gap-3.5 text-center px-5'>
-										<h3 className='text-xl text-gray-400'>One of the</h3>
-										<h2 className='text-3xl text-gray-500'>
-											largest makers of
-										</h2>
-										<h1 className='text-4xl sm:text-5xl font-extrabold px-3.5 leading-normal sm:px-0'>
-											dhoops & agarbattis
-										</h1>
-										<div className='flex flex-col sm:flex-row items-center justify-center gap-3.5 mt-10 z-[10]'>
-											<Button _type='outlined' text='Lorem ipsum' />
-											<Button text='Lorem ipsum' />
-										</div>
+
+					<section id='banner-1' className='banner_card bg-gray-200 overflow-hidden'>
+						<div className='grid place-items-center w-full h-full relative'>
+							<Tween from={{ scale: '1.5', opacity: '0' }} to={{ scale: '1.0', opacity: '.25' }} duration={2}>
+
+								<img
+									src='/Gt_Website-06.png'
+									className='w-full h-full object-cover absolute top-0 left-0 rounded-2xl opacity-25'
+									alt=''
+								/>
+							</Tween>
+							<Tween from={{ y: '5rem', opacity: '0' }} to={{ y: '0rem', opacity: '1' }} duration={1.5}>
+								<div className='grid gap-1.5 sm:gap-3.5 text-center px-5'>
+									<h3 className='text-xl text-gray-400'>One of the</h3>
+									<h2 className='text-2xl sm:text-3xl text-gray-500'>
+										largest makers of
+									</h2>
+									<h1 className='text-3xl leading-tight sm:text-5xl font-extrabold px-3.5 sm:leading-normal sm:px-0'>
+										dhoops & agarbattis
+									</h1>
+									<div className='flex items-center justify-center gap-3.5 mt-10 z-[10]'>
+										<Button _type='outlined' text='Lorem ipsum' />
+										<Button text='Lorem ipsum' />
 									</div>
 								</div>
-							</section>
-						</Tween>
-					</ScrollTrigger>
+							</Tween>
+						</div>
+					</section>
 
-					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-1'>
+
+					<ScrollTrigger start='-300px center' end='bottom center'>
 						<Tween
 							from={{ x: '100px', opacity: 0 }}
-							duration={1.5}
+							duration={1.75}
 							to={{ x: '0px', opacity: 1 }}
 						>
 							<section
@@ -66,7 +65,7 @@ const Homepage = () => {
 								className='banner_card bg-gray-800 relative overflow-hidden'
 							>
 								<section className='grid gap-5 place-items-start'>
-									<h2 className='text-4xl font-extrabold text-white'>
+									<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>
 										Agarbatti
 									</h2>
 									<p className='text-gray-400 text-md'>Incense sticks</p>
@@ -83,25 +82,25 @@ const Homepage = () => {
 						</Tween>
 					</ScrollTrigger>
 
-					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-1'>
+					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-2'>
 						<Tween
 							from={{ x: '100px', opacity: 0 }}
-							duration={1.75}
+							duration={2}
 							to={{ x: '0px', opacity: 1 }}
 						>
 							<section
 								id='banner-3'
-								className='banner_card bg-orange-200 overflow-hidden lg:overflow-hidden'
+								className='banner_card bg-orange-200 overflow-hidden lg:overflow-visible'
 							>
 								<section className='grid gap-5 place-items-start relative'>
-									<h2 className='text-4xl font-extrabold'>Camphor</h2>
+									<h2 className='text-3xl sm:text-4xl font-extrabold'>Camphor</h2>
 									<button className='bg-white bg-opacity-75 px-8 py-2.5 rounded-full'>
 										Show all
 									</button>
 
 									<img
 										src={'/Gt_Website-09.png'}
-										className='w-[400px] h-auto object-contain absolute -top-5 -right-20'
+										className='w-[400px] h-auto object-contain absolute top-12 md:top-14 -right-16 md:-right-24'
 										alt=''
 									/>
 								</section>
@@ -109,15 +108,15 @@ const Homepage = () => {
 						</Tween>
 					</ScrollTrigger>
 
-					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-1'>
+					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-3'>
 						<Tween
-							from={{ x: '100px', opacity: 0 }}
-							duration={2}
+							from={{ x: '120px', opacity: 0 }}
+							duration={2.25}
 							to={{ x: '0px', opacity: 1 }}
 						>
 							<section id='banner-4' className='banner_card bg-red-600'>
 								<section className='grid gap-5 place-items-start'>
-									<h2 className='text-4xl font-extrabold text-white'>
+									<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>
 										Sambrani cups
 									</h2>
 									<p className='text-gray-200 text-md'>Incense sticks</p>
@@ -129,16 +128,16 @@ const Homepage = () => {
 						</Tween>
 					</ScrollTrigger>
 
-					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-1'>
+					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-3'>
 						<Tween
 							from={{ x: '100px', opacity: 0 }}
-							duration={2.25}
+							duration={2.5}
 							to={{ x: '0px', opacity: 1 }}
 						>
 							<section className='banner_card bg-gray-800'>
 								<section className='grid gap-2 place-items-start'>
 									<p className='text-gray-500 text-2xl'>Sambrani</p>
-									<h2 className='text-4xl font-extrabold text-white'>Dhoops</h2>
+									<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>Dhoops</h2>
 									<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full mt-8'>
 										Show all
 									</button>
@@ -148,17 +147,17 @@ const Homepage = () => {
 					</ScrollTrigger>
 				</div>
 
-				<div className='relative overflow-hidden lg:overflow-visible'>
+				<div className='relative'>
 					<ScrollTrigger
 						start='-200px center'
 						end='bottom center'
 						scrub={0.35}
 						toggleActions='none'
 					>
-						<Tween from={{ x: '-50px' }} to={{ x: '100px' }} duration={2.5}>
+						<Tween from={{ x: '-25px' }} to={{ x: '25px' }} duration={2.5}>
 							<img
 								src='/Gt_Website-10.png'
-								className='max-w-sm w-full h-auto absolute -top-3.5 -left-32 lg:top-0 lg:left-0 opacity-10 lg:opacity-20 z-[-1]'
+								className='max-w-xs sm:max-w-sm w-full h-auto absolute -top-3.5 -left-32 lg:top-0 lg:left-0 opacity-10 lg:opacity-20 z-[-1]'
 								alt=''
 							/>
 						</Tween>
@@ -169,10 +168,10 @@ const Homepage = () => {
 						scrub={0.35}
 						toggleActions='none'
 					>
-						<Tween from={{ x: '50px' }} to={{ x: '-100px' }} duration={2.5}>
+						<Tween from={{ x: '25px' }} to={{ x: '-25px' }} duration={2.5}>
 							<img
 								src='/Gt_Website-11.png'
-								className='max-w-xl w-full h-auto absolute -right-36 -bottom-10 lg:right-0 lg:-bottom-32 z-[-1]'
+								className='max-w-xl w-full h-auto absolute -right-36 -bottom-32 lg:right-0 z-[-1]'
 								alt=''
 							/>
 						</Tween>
@@ -212,7 +211,7 @@ const Homepage = () => {
 					</div>
 				</div>
 
-				<div className='grid gap-20' id='home-products'>
+				<div className='grid gap-12 md:gap-20' id='home-products'>
 					<ScrollTrigger
 						start='-200px center'
 						end='bottom center'
@@ -224,8 +223,8 @@ const Homepage = () => {
 							duration={1.5}
 						>
 							<section className='text-center'>
-								<h3 className='text-xl text-gray-400'>Product range</h3>
-								<h2 className='text-4xl font-extrabold'>Our top sellers</h2>
+								<h3 className='text-lg md:text-xl text-gray-400'>Product range</h3>
+								<h2 className='text-3xl md:text-4xl font-extrabold'>Our top sellers</h2>
 							</section>
 						</Tween>
 					</ScrollTrigger>
@@ -273,7 +272,7 @@ const Homepage = () => {
 									scrub={1}
 									toggleActions='none'
 								>
-									<Tween from={{ x: '100px' }} to={{ x: '0px' }}>
+									<Tween from={{ x: '50px' }} to={{ x: '0px' }}>
 										<div className='absolute w-full lg:-left-10 bottom-0 grid place-items-center'>
 											<img
 												src={'/Gt_Website-15.png'}
@@ -336,28 +335,29 @@ const Homepage = () => {
 									duration={1.5}
 								>
 									<div className='p_base grid place-items-center gap-12 z-[1]'>
-										<h1 className='text-4xl font-extrabold text-white text-center leading-normal'>
+										<h1 className='text-3xl md:text-4xl font-extrabold text-white text-center leading-normal'>
 											We have customers worldwide
 										</h1>
-										<div className='flex flex-wrap justify-center gap-5'>
-											{[
-												'Australia',
-												'Mauritius',
-												'Singapore',
-												'Malaysia',
-												'France',
-												'SouthAfrica',
-												'UAE',
-											].map((item, i) => (
-												<button
-													key={i}
-													className={`text-white px-5 py-2.5 rounded ${
-														i === 3 ? 'bg-white bg-opacity-25' : ''
-													}`}
-												>
-													{item}
-												</button>
-											))}
+										<div className='overflow-x-scroll hide-scrollbar w-full'>
+											<div className='flex justify-center gap-5'>
+												{[
+													'Australia',
+													'Mauritius',
+													'Singapore',
+													'Malaysia',
+													'France',
+													'SouthAfrica',
+													'UAE',
+												].map((item, i) => (
+													<button
+														key={i}
+														className={`text-white px-5 py-2.5 rounded ${i === 3 ? 'bg-white bg-opacity-25' : ''
+															}`}
+													>
+														{item}
+													</button>
+												))}
+											</div>
 										</div>
 										<p className='max-w-xl text-center text-lg text-red-50 leading-loose'>
 											The manufacturing division was started as a vision of

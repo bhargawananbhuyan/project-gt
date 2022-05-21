@@ -48,7 +48,7 @@ const HomeProduct = () => {
 
 	return (
 		<>
-			<ScrollTrigger start='-200px center' end='bottom center'>
+			<ScrollTrigger start='-300px center' end='bottom center'>
 				<Tween
 					from={{ opacity: '0', y: '2.5rem' }}
 					to={{ opacity: '1', y: '0rem' }}
@@ -56,12 +56,12 @@ const HomeProduct = () => {
 				>
 					<div>
 						<section
-							className='p-5 grid gap-y-5 cursor-pointer'
+							className='p-3.5 md:p-5 xl:p-[1.5vw] grid gap-y-5 cursor-pointer'
 							onMouseOver={handleMouseOver}
 							onMouseOut={handleMouseOut}
 							style={{ transition: '2s ease' }}
 						>
-							<div className='w-full rounded-xl bg-gray-100 h-[225px]'>
+							<div className='w-full aspect-square rounded-lg bg-gray-100'>
 								{/* <img
 						ref={imgRef}
 						src={`/agri-${isHovered ? '15' : '13'}.png`}
@@ -69,9 +69,9 @@ const HomeProduct = () => {
 						height={225}
 					/> */}
 							</div>
-							<div>
-								<h3 className='text-gray-400'>Agarbatti</h3>
-								<h2 className='text-xl font-bold'>Royal Lavendar</h2>
+							<div className='grid gap-y-2'>
+								<h3 className='text-gray-400 text-sm md:text-md'>Agarbatti</h3>
+								<h2 className='md:text-xl font-extrabold'>Royal Lavendar</h2>
 							</div>
 							{isHovered && (
 								<button

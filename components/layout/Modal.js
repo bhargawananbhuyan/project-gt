@@ -23,7 +23,7 @@ export default function Modal({ open, setOpen }) {
 					</Transition.Child>
 
 					<div className='fixed inset-0 overflow-y-scroll'>
-						<div className='flex min-h-full items-center justify-center p-4 text-center'>
+						<div className='flex min-h-full items-center justify-end text-center'>
 							<Transition.Child
 								as={Fragment}
 								enter='ease-out duration-300'
@@ -33,7 +33,7 @@ export default function Modal({ open, setOpen }) {
 								leaveFrom='opacity-100 scale-100'
 								leaveTo='opacity-0 scale-95'
 							>
-								<Dialog.Panel className='w-full max-w-screen-lg transform overflow-hidden rounded-2xl bg-white p-8 text-left align-middle shadow-xl transition-all grid gap-y-6'>
+								<Dialog.Panel className='w-full max-w-screen-lg transform overflow-hidden md:rounded-l-2xl bg-white p-8 text-left align-middle shadow-xl transition-all grid gap-y-6'>
 									<div className='grid place-items-end'>
 										<button className='px-2.5 py-1.5' onClick={closeModal}>
 											<FontAwesomeIcon icon={faTimes} />
@@ -51,7 +51,7 @@ export default function Modal({ open, setOpen }) {
 									</section>
 									<section>
 										<h1 className='text-3xl font-extrabold'>Royal Lavendar</h1>
-										<p className='text-lg mt-3.5'>
+										<p className='text-lg mt-3.5 text-gray-400'>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 											Duis nec nisl vel urna dictum tempus eu non mauris.
 											Integer ut lectus a ante congue vehicula. Aliquam

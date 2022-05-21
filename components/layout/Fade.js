@@ -2,7 +2,7 @@ import { ScrollTrigger, Tween } from 'react-gsap'
 
 const Fade = ({ children, trigger = '', direction = '' }) => {
 	return (
-		<ScrollTrigger start='-200px center' end='bottom center' trigger={trigger}>
+		<ScrollTrigger start='-300px center' end='bottom center' trigger={trigger}>
 			{direction === 'left' ? (
 				<Tween
 					from={{ opacity: '0', x: '-2.5rem' }}

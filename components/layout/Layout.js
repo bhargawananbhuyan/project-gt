@@ -22,9 +22,8 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 	return (
 		<div className='app'>
 			<header
-				className={`fixed ${
-					scrolled ? 'bg-white bg-opacity-30 backdrop-blur-md' : ''
-				} left-0 top-0 w-screen z-[100] transition-all`}
+				className={`fixed ${scrolled ? 'bg-white bg-opacity-30 backdrop-blur-md' : ''
+					} left-0 top-0 w-screen z-[100] transition-all`}
 			>
 				<div className='py-5 lg:py-6 flex items-center justify-between p_base'>
 					<Link href={'/'}>
