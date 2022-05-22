@@ -64,15 +64,17 @@ const Homepage = () => {
 								id='banner-2'
 								className='banner_card bg-gray-800 relative overflow-hidden'
 							>
-								<section className='grid gap-5 place-items-start'>
-									<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>
-										Agarbatti
-									</h2>
-									<p className='text-gray-400 text-md'>Incense sticks</p>
-									<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full z-[10]'>
-										Show all
-									</button>
-								</section>
+								<Fade>
+									<section className='grid gap-5 place-items-start'>
+										<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>
+											Agarbatti
+										</h2>
+										<p className='text-gray-400 text-md'>Incense sticks</p>
+										<button className='bg-white bg-opacity-25 hover:bg-opacity-75 hover:text-black transition-all text-white px-8 py-2.5 rounded-full z-[10]'>
+											Show all
+										</button>
+									</section>
+								</Fade>
 								<img
 									src={'/Gt_Website-08.png'}
 									className='w-[400px] h-auto object-contain absolute top-16 right-0'
@@ -92,18 +94,22 @@ const Homepage = () => {
 								id='banner-3'
 								className='banner_card bg-orange-200 overflow-hidden xl:overflow-visible'
 							>
-								<section className='grid gap-5 place-items-start relative'>
-									<h2 className='text-3xl sm:text-4xl font-extrabold'>Camphor</h2>
-									<button className='bg-white bg-opacity-75 px-8 py-2.5 rounded-full'>
-										Show all
-									</button>
+								<Fade>
+									<section className='grid gap-5 place-items-start relative'>
+										<h2 className='text-3xl sm:text-4xl font-extrabold'>Camphor</h2>
+										<button className='bg-white hover:bg-opacity-100 transition-all bg-opacity-75 px-8 py-2.5 rounded-full'>
+											Show all
+										</button>
 
-									<img
-										src={'/Gt_Website-09.png'}
-										className='w-[400px] h-auto object-contain absolute top-12 md:top-[2.75vw] -right-16 md:-right-24'
-										alt=''
-									/>
-								</section>
+										<Fade>
+											<img
+												src={'/Gt_Website-09.png'}
+												className='w-[400px] h-auto object-contain absolute top-12 md:top-[2.75vw] -right-16 md:-right-24'
+												alt=''
+											/>
+										</Fade>
+									</section>
+								</Fade>
 							</section>
 						</Tween>
 					</ScrollTrigger>
@@ -115,15 +121,17 @@ const Homepage = () => {
 							to={{ x: '0px', opacity: 1 }}
 						>
 							<section id='banner-4' className='banner_card bg-red-600'>
-								<section className='grid gap-5 place-items-start'>
-									<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>
-										Sambrani cups
-									</h2>
-									<p className='text-gray-200 text-md'>Incense sticks</p>
-									<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full'>
-										Show all
-									</button>
-								</section>
+								<Fade>
+									<section className='grid gap-5 place-items-start'>
+										<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>
+											Sambrani cups
+										</h2>
+										<p className='text-gray-200 text-md'>Incense sticks</p>
+										<button className='bg-white bg-opacity-25 text-white hover:bg-opacity-75 hover:text-black transition-all px-8 py-2.5 rounded-full'>
+											Show all
+										</button>
+									</section>
+								</Fade>
 							</section>
 						</Tween>
 					</ScrollTrigger>
@@ -135,13 +143,15 @@ const Homepage = () => {
 							to={{ x: '0px', opacity: 1 }}
 						>
 							<section className='banner_card bg-gray-800'>
-								<section className='grid gap-2 place-items-start'>
-									<p className='text-gray-500 text-2xl'>Sambrani</p>
-									<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>Dhoops</h2>
-									<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full mt-8'>
-										Show all
-									</button>
-								</section>
+								<Fade>
+									<section className='grid gap-2 place-items-start'>
+										<p className='text-gray-500 text-2xl'>Sambrani</p>
+										<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>Dhoops</h2>
+										<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full mt-8 hover:bg-opacity-75 hover:text-black transition-all'>
+											Show all
+										</button>
+									</section>
+								</Fade>
 							</section>
 						</Tween>
 					</ScrollTrigger>
