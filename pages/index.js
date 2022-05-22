@@ -90,7 +90,7 @@ const Homepage = () => {
 						>
 							<section
 								id='banner-3'
-								className='banner_card bg-orange-200 overflow-hidden lg:overflow-visible'
+								className='banner_card bg-orange-200 overflow-hidden xl:overflow-visible'
 							>
 								<section className='grid gap-5 place-items-start relative'>
 									<h2 className='text-3xl sm:text-4xl font-extrabold'>Camphor</h2>
@@ -110,7 +110,7 @@ const Homepage = () => {
 
 					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-3'>
 						<Tween
-							from={{ x: '120px', opacity: 0 }}
+							from={{ x: '100px', opacity: 0 }}
 							duration={2.25}
 							to={{ x: '0px', opacity: 1 }}
 						>
@@ -128,7 +128,7 @@ const Homepage = () => {
 						</Tween>
 					</ScrollTrigger>
 
-					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-4'>
+					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-3'>
 						<Tween
 							from={{ x: '100px', opacity: 0 }}
 							duration={2.5}

@@ -1,4 +1,4 @@
-import { faClose, faFilter } from '@fortawesome/free-solid-svg-icons'
+import { faFilter } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import Layout from '../components/layout/Layout'
@@ -12,10 +12,10 @@ const Products = () => {
 			<div className='p_base pt-36 md:pt-48 pb-32'>
 				<h1 className='text-3xl md:text-4xl font-extrabold text-center'>Our Products</h1>
 
-				<div className='lg:hidden fixed bottom-8 right-8 z-[101]'>
+				<div className='lg:hidden fixed bottom-8 right-8 z-[1]'>
 					<button
 						className='text-lg mt-8 border flex items-center gap-x-2.5 px-5 py-2.5 rounded bg-white border-black'
-						onClick={() => setShowFilter(!showFilter)}
+						onClick={() => setShowFilter(true)}
 					>
 						<span>Filter</span>
 						<FontAwesomeIcon icon={faFilter} />
@@ -23,9 +23,19 @@ const Products = () => {
 				</div>
 
 				<div
-					className={`fixed inset-0 overflow-y-scroll hide-scrollbar left-0 -top-20 py-10 px-5 z-[100] lg:py-0 bg-white shadow-xl w-full ${showFilter ? 'grid' : 'hidden'
+					className={`fixed inset-0 overflow-y-scroll hide-scrollbar left-0 -top-20 py-10 px-5 z-[201] lg:py-0 bg-white shadow-xl w-full ${showFilter ? 'grid' : 'hidden'
 						} lg:hidden col-start-1 col-end-1 mt-20 items-start`}
 				>
+					<div className='lg:hidden fixed bottom-8 right-8 z-[1]'>
+						<button
+							className='text-lg mt-8 border flex items-center gap-x-2.5 px-5 py-2.5 rounded bg-white border-black'
+							onClick={() => setShowFilter(false)}
+						>
+							<span>Filter</span>
+							<FontAwesomeIcon icon={faFilter} />
+						</button>
+					</div>
+
 					<div className='grid gap-y-16 relative'>
 						<section>
 							<h2 className='text-xl font-extrabold'>Agarbatti</h2>
