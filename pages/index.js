@@ -75,7 +75,7 @@ const Homepage = () => {
 								</section>
 								<img
 									src={'/Gt_Website-08.png'}
-									className='w-[400px] h-auto object-contain absolute top-0 right-0'
+									className='w-[400px] h-auto object-contain absolute top-16 right-0'
 									alt=''
 								/>
 							</section>
@@ -100,7 +100,7 @@ const Homepage = () => {
 
 									<img
 										src={'/Gt_Website-09.png'}
-										className='w-[400px] h-auto object-contain absolute top-12 md:top-14 -right-16 md:-right-24'
+										className='w-[400px] h-auto object-contain absolute top-12 md:top-[2.75vw] -right-16 md:-right-24'
 										alt=''
 									/>
 								</section>

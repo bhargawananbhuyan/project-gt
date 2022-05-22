@@ -37,11 +37,12 @@
 	grid-auto-rows: 250px;
 
 	@screen xl {
+		@apply gap-[2.5vw];
 		grid-auto-rows: 38.5vh;
 	}
 
 	.banner_card {
-		@apply p-10 md:p-14 rounded-2xl;
+		@apply p-10 md:p-[2.75vw] rounded-2xl;
 		&:nth-of-type(1) {
 			@apply p-0;
 			grid-column: 1;
