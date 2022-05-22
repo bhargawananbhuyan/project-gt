@@ -128,7 +128,7 @@ const Homepage = () => {
 						</Tween>
 					</ScrollTrigger>
 
-					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-3'>
+					<ScrollTrigger start='-300px center' end='bottom center' trigger='#banner-4'>
 						<Tween
 							from={{ x: '100px', opacity: 0 }}
 							duration={2.5}
