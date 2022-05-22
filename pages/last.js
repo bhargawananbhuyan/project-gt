@@ -39,9 +39,8 @@ const Last = () => {
 					</section>
 					<div className='flex items-center justify-center gap-5 max-w-screen-lg mx-auto flex-wrap'>
 						{Array.from(Array(7).keys()).map((i) => (
-							<Fade>
+							<Fade key={i}>
 								<section
-									key={i}
 									className='h-[125px] w-[125px] bg-white bg-opacity-10 rounded-xl'
 								></section>
 							</Fade>
@@ -86,8 +85,8 @@ const Last = () => {
 
 					<div className='max-w-screen-xl mx-auto text-center md:text-left px-5 text-white my-24 md:my-64 grid md:grid-cols-3 gap-14 md:gap-10'>
 						{Array.from(Array(3).keys()).map((i) => (
-							<Fade>
-								<section key={i}>
+							<Fade key={i}>
+								<section>
 									<h2 className='text-4xl font-extrabold'>1964</h2>
 									<p className='text-xl leading-relaxed mt-8'>
 										Set foot in Chennai (then Madras) as an employee in a Kirana
@@ -204,8 +203,8 @@ const Last = () => {
 
 						<section className='last_brands_grid auto-rows-[150px] md:auto-rows-[200px] mt-10'>
 							{Array.from(Array(6).keys()).map((i) => (
-								<Fade>
-									<div key={i} className='relative grid place-items-center'>
+								<Fade key={i}>
+									<div className='relative grid place-items-center'>
 										<img
 											src={`/Gt_Website-3${i}.png`}
 											className='absolute object-contain w-[125px] md:w-[200px] h-auto'
