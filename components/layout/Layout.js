@@ -93,12 +93,17 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 						</div>
 					</>
 				) : (
-					<div className='py-20 relative bg-black bg-opacity-30'>
+					<div className='py-20 md:py-32 relative bg-black bg-opacity-30'>
 						<img
 							src='/Gt_Website-20.png'
 							className='absolute object-cover w-screen h-full top-0 z-[-1]'
 							alt=''
 						/>
+						<ScrollTrigger toggleActions='none' scrub={.5}>
+							<Tween from={{ right: '5rem' }} to={{ right: '-1.25rem' }}>
+								<img src='/Gt_Website-08.png' alt='' className='absolute max-w-xs h-auto -right-5 md:right-20 -bottom-10' />
+							</Tween>
+						</ScrollTrigger>
 						<div className='p_base grid gap-10'>
 							<section className='grid gap-3.5 text-white'>
 								<ScrollTrigger>
@@ -144,7 +149,8 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 						</div>
 					</div>
 				)}
-				<section id='footer' className='p_base py-20 grid md:grid-cols-3 gap-14'>
+				<section id='footer' className='p_base py-20 grid md:grid-cols-3 gap-14 relative'>
+
 					<Fade>
 						<div>
 							<div className='grid gap-10'>

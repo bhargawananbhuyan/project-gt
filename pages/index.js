@@ -31,7 +31,7 @@ const Homepage = () => {
 
 								<img
 									src='/Gt_Website-06.png'
-									className='w-full h-full object-cover absolute top-0 left-0 rounded-2xl opacity-25'
+									className='w-full h-full object-cover absolute top-0 left-0 rounded-2xl opacity-25 z-[0]'
 									alt=''
 								/>
 							</Tween>
@@ -44,9 +44,10 @@ const Homepage = () => {
 									<h1 className='text-3xl leading-tight sm:text-5xl font-extrabold px-3.5 sm:leading-normal sm:px-0'>
 										dhoops & agarbattis
 									</h1>
-									<div className='flex items-center justify-center gap-3.5 mt-10 z-[10]'>
+									<div className='flex items-center justify-center gap-3.5 sm:gap-5 mt-10 relative'>
 										<Button _type='outlined' text='Lorem ipsum' />
 										<Button text='Lorem ipsum' />
+										<img src='/Gt_Website-05.png' alt='' className='max-w-[100px] mr-1.5 h-auto absolute -top-28 z-[-1]' />
 									</div>
 								</div>
 							</Tween>
@@ -62,7 +63,7 @@ const Homepage = () => {
 						>
 							<section
 								id='banner-2'
-								className='banner_card bg-gray-800 relative overflow-hidden'
+								className='banner_card bg-[#252525] relative overflow-hidden'
 							>
 								<Fade>
 									<section className='grid gap-5 place-items-start'>
@@ -76,8 +77,8 @@ const Homepage = () => {
 									</section>
 								</Fade>
 								<img
-									src={'/Gt_Website-08.png'}
-									className='w-[400px] h-auto object-contain absolute top-16 right-0'
+									src={'/Gt_Website-07.png'}
+									className='w-[400px] h-auto object-contain absolute top-32 right-0'
 									alt=''
 								/>
 							</section>
@@ -142,7 +143,8 @@ const Homepage = () => {
 							duration={2.5}
 							to={{ x: '0px', opacity: 1 }}
 						>
-							<section className='banner_card bg-gray-800'>
+							<section className='banner_card bg-black relative overflow-hidden'>
+								<Image src={'/Gt_Website-37.jpg'} layout='fill' alt='' className='absolute opacity-50' />
 								<Fade>
 									<section className='grid gap-2 place-items-start'>
 										<p className='text-gray-500 text-2xl'>Sambrani</p>
@@ -182,6 +184,20 @@ const Homepage = () => {
 							<img
 								src='/Gt_Website-11.png'
 								className='max-w-xl w-full h-auto absolute -right-36 -bottom-32 lg:right-0 z-[-1]'
+								alt=''
+							/>
+						</Tween>
+					</ScrollTrigger>
+					<ScrollTrigger
+						start='-200px center'
+						end='bottom center'
+						scrub={0.35}
+						toggleActions='none'
+					>
+						<Tween from={{ x: '30px' }} to={{ x: '-30px' }} duration={3}>
+							<img
+								src='/Gt_Website-13.png'
+								className='w-[100px] lg:w-[125px] h-auto absolute right-[12rem] lg:right-[27.5rem] -bottom-20 z-[-1]'
 								alt=''
 							/>
 						</Tween>
@@ -307,7 +323,7 @@ const Homepage = () => {
 					/>
 					<img
 						src='/Gt_Website-18.png'
-						className='w-[250px] h-auto absolute right-10 -bottom-52 z-[-1]'
+						className='w-[250px] h-auto absolute -right-10 md:right-10 -bottom-56 md:-bottom-52 z-[-1]'
 						alt=''
 					/>
 					<div className='max-w-screen-xl mx-auto'>
@@ -323,7 +339,7 @@ const Homepage = () => {
 				</div>
 
 				<div>
-					<div className='bg-[#d82a44] py-24'>
+					<div className='bg-[#d82a44] py-24 md:py-32'>
 						<div
 							className='max-w-screen-xl mx-auto grid place-items-center relative'
 							id='countries'
