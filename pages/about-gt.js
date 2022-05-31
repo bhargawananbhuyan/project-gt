@@ -4,66 +4,66 @@ import Layout from '../components/layout/Layout'
 import NumberGrid from '../components/layout/NumberGrid'
 
 const Last = () => {
-	React.useEffect(() => {
-		if (window === undefined) return
+	// React.useEffect(() => {
+	// 	if (window === undefined) return
 
-		const path1Ref = document.querySelector('#path__1')
+	// 	const path1Ref = document.querySelector('#path__1')
 
-		const length = path1Ref.getTotalLength()
-		path1Ref.style.strokeDasharray = length
-		path1Ref.style.strokeDashoffset = length
+	// 	const length = path1Ref.getTotalLength()
+	// 	path1Ref.style.strokeDasharray = length
+	// 	path1Ref.style.strokeDashoffset = length
 
-		document.addEventListener('scroll', () => {
-			const scrollpercent =
-				(document.body.scrollTop + document.documentElement.scrollTop) /
-				(document.documentElement.scrollHeight - document.documentElement.clientHeight)
+	// 	document.addEventListener('scroll', () => {
+	// 		const scrollpercent =
+	// 			(document.body.scrollTop + document.documentElement.scrollTop) /
+	// 			(document.documentElement.scrollHeight - document.documentElement.clientHeight)
 
-			const draw = length * scrollpercent * 80
-			path1Ref.style.strokeDashoffset = length - draw
-		})
-	}, [])
+	// 		const draw = length * scrollpercent * 80
+	// 		path1Ref.style.strokeDashoffset = length - draw
+	// 	})
+	// }, [])
 
-	React.useEffect(() => {
-		if (window === undefined) return
+	// React.useEffect(() => {
+	// 	if (window === undefined) return
 
-		const path2Ref = document.querySelector('#path__2')
+	// 	const path2Ref = document.querySelector('#path__2')
 
-		const length = path2Ref.getTotalLength()
-		path2Ref.style.strokeDasharray = length
-		path2Ref.style.strokeDashoffset = length
+	// 	const length = path2Ref.getTotalLength()
+	// 	path2Ref.style.strokeDasharray = length
+	// 	path2Ref.style.strokeDashoffset = length
 
-		document.addEventListener('scroll', () => {
-			const scrollpercent =
-				(document.body.scrollTop + document.documentElement.scrollTop) /
-				(document.documentElement.scrollHeight - document.documentElement.clientHeight)
+	// 	document.addEventListener('scroll', () => {
+	// 		const scrollpercent =
+	// 			(document.body.scrollTop + document.documentElement.scrollTop) /
+	// 			(document.documentElement.scrollHeight - document.documentElement.clientHeight)
 
-			const draw = length * scrollpercent * 10
-			path2Ref.style.strokeDashoffset = draw - length
-		})
-	}, [])
+	// 		const draw = length * scrollpercent * 10
+	// 		path2Ref.style.strokeDashoffset = draw - length
+	// 	})
+	// }, [])
 
-	React.useEffect(() => {
-		if (window === undefined) return
+	// React.useEffect(() => {
+	// 	if (window === undefined) return
 
-		const path3Ref = document.querySelector('#path__3')
+	// 	const path3Ref = document.querySelector('#path__3')
 
-		const length = path3Ref.getTotalLength()
-		path3Ref.style.strokeDasharray = length
-		path3Ref.style.strokeDashoffset = length
+	// 	const length = path3Ref.getTotalLength()
+	// 	path3Ref.style.strokeDasharray = length
+	// 	path3Ref.style.strokeDashoffset = length
 
-		document.addEventListener('scroll', () => {
-			const scrollpercent =
-				(document.body.scrollTop + document.documentElement.scrollTop) /
-				(document.documentElement.scrollHeight - document.documentElement.clientHeight)
+	// 	document.addEventListener('scroll', () => {
+	// 		const scrollpercent =
+	// 			(document.body.scrollTop + document.documentElement.scrollTop) /
+	// 			(document.documentElement.scrollHeight - document.documentElement.clientHeight)
 
-			const draw = length * scrollpercent * 10
-			path3Ref.style.strokeDashoffset = length - draw
-		})
-	}, [])
+	// 		const draw = length * scrollpercent * 10
+	// 		path3Ref.style.strokeDashoffset = length - draw
+	// 	})
+	// }, [])
 
 	return (
 		<Layout footerBg='light'>
-			<div className='relative hidden xl:block bg-[#d82a44] py-10'>
+			<div className='relative hidden xl:block bg-[#d82a44] py-16'>
 				<div className='top-14 -right-[45%] rotate-180 absolute w-full'>
 					<svg
 						id='Layer_1'
