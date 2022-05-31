@@ -63,7 +63,7 @@ const Last = () => {
 
 	return (
 		<Layout footerBg='light'>
-			<div className='relative bg-[#d82a44] py-10'>
+			<div className='relative hidden xl:block bg-[#d82a44] py-10'>
 				<div className='top-14 -right-[45%] rotate-180 absolute w-full'>
 					<svg
 						id='Layer_1'
@@ -159,7 +159,7 @@ const Last = () => {
 							</section>
 						</section>
 					</div>
-					<div className='relative py-10'>
+					<div className='hidden xl:block relative py-10'>
 						<div className='absolute w-full -left-[45%]'>
 							<svg
 								id='Layer_1'
@@ -177,7 +177,7 @@ const Last = () => {
 						</div>
 					</div>
 
-					<div className='max-w-screen-xl mx-auto text-center md:text-left px-5 text-white mt-24 md:mt-64 grid md:grid-cols-3 gap-14 md:gap-10'>
+					<div className='max-w-screen-xl mx-auto text-center md:text-left px-5 text-white my-24 md:my-64 grid md:grid-cols-3 gap-14 md:gap-10'>
 						{Array.from(Array(3).keys()).map((i) => (
 							<Fade key={i} duration={(i + 1) * 0.5}>
 								<section>
@@ -191,7 +191,7 @@ const Last = () => {
 						))}
 					</div>
 
-					<div className='relative pt-24 pb-72'>
+					<div className='hidden xl:block relative -mt-36 pb-72'>
 						<div className='absolute w-full -right-[45%] rotate-180'>
 							<svg
 								id='Layer_1'
