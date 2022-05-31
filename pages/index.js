@@ -346,7 +346,7 @@ const Homepage = () => {
 						scrub={0.5}
 						toggleActions='none'
 					>
-						<Tween from={{ rotation: -45 }} to={{ rotation: 0 }}>
+						<Tween from={{ rotation: -20 }} to={{ rotation: 0 }}>
 							<img
 								src='/Gt_Website-17.png'
 								className='w-[200px] lg:w-[250px] h-auto absolute -left-5 lg:left-24 -top-36 lg:-top-40'
