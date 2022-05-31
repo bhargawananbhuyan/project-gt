@@ -201,6 +201,15 @@
 	@apply grid gap-5;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	@screen sm {
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(18vw, 1fr));
 	}
+}
+
+.cls-1 {
+	fill: none;
+	stroke: #fff;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 10px;
+	opacity: 0.18;
 }

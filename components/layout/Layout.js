@@ -6,6 +6,8 @@ import Drawer from './Drawer'
 import { gsap } from 'gsap'
 import { TextPlugin } from 'gsap/dist/TextPlugin'
 import Fade from './Fade'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const Layout = ({ children, footerBg = 'dark' }) => {
 	gsap.registerPlugin(TextPlugin)
@@ -22,8 +24,9 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 	return (
 		<div className='app'>
 			<header
-				className={`fixed ${scrolled ? 'bg-white bg-opacity-30 backdrop-blur-md' : ''
-					} left-0 top-0 w-screen z-[200] transition-all`}
+				className={`fixed ${
+					scrolled ? 'bg-white bg-opacity-30 backdrop-blur-md' : ''
+				} left-0 top-0 w-screen z-[200] transition-all`}
 			>
 				<div className='py-5 lg:py-6 flex items-center justify-between p_base'>
 					<Link href={'/'}>
@@ -81,8 +84,9 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 											/>
 										</div>
 
-										<button className='bg-red-500 text-white px-7 py-3.5 w-[200px] text-left rounded-lg mt-10'>
-											Submit
+										<button className='bg-red-500 text-white flex items-center gap-x-5 px-7 py-3.5 text-left rounded-lg mt-10'>
+											<span>Submit</span>
+											<FontAwesomeIcon icon={faArrowRight} />
 										</button>
 									</form>
 								</Fade>
@@ -99,9 +103,13 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 							className='absolute object-cover w-screen h-full top-0 z-[-1]'
 							alt=''
 						/>
-						<ScrollTrigger toggleActions='none' scrub={.5}>
-							<Tween from={{ right: '5rem' }} to={{ right: '-1.25rem' }}>
-								<img src='/Gt_Website-08.png' alt='' className='absolute max-w-xs h-auto -right-5 md:right-20 -bottom-10' />
+						<ScrollTrigger toggleActions='none' scrub={0.5}>
+							<Tween from={{ right: '-2rem' }} to={{ right: '1.25rem' }}>
+								<img
+									src='/Gt_Website-08.png'
+									alt=''
+									className='absolute max-w-xs h-auto -right-5 md:right-20 -bottom-10'
+								/>
 							</Tween>
 						</ScrollTrigger>
 						<div className='p_base grid gap-10'>
@@ -141,8 +149,9 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 										/>
 									</div>
 
-									<button className='bg-gray-500 text-white px-7 py-3.5 w-[200px] text-left rounded-lg mt-10'>
-										Submit
+									<button className='bg-gray-500 text-white flex items-center gap-x-5 px-7 py-3.5 text-left rounded-lg mt-10'>
+										<span>Submit</span>
+										<FontAwesomeIcon icon={faArrowRight} />
 									</button>
 								</form>
 							</Fade>
@@ -150,7 +159,6 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 					</div>
 				)}
 				<section id='footer' className='p_base py-20 grid md:grid-cols-3 gap-14 relative'>
-
 					<Fade>
 						<div>
 							<div className='grid gap-10'>

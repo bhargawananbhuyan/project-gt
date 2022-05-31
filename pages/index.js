@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { ScrollTrigger, Tween } from 'react-gsap'
+import { useState } from 'react'
 import Fade from '../components/layout/Fade'
 import Layout from '../components/layout/Layout'
 import NumberGrid from '../components/layout/NumberGrid'
@@ -8,10 +9,11 @@ import HomeProduct from '../components/products/HomeProduct'
 
 const Button = ({ _type = 'contained', text, ...rest }) => (
 	<button
-		className={`${_type === 'contained'
-			? 'border border-gray-800 bg-gray-800 text-white'
-			: 'border border-gray-800'
-			} rounded-lg px-5 sm:px-8 py-3.5 font-semibold`}
+		className={`${
+			_type === 'contained'
+				? 'border border-gray-800 bg-gray-800 text-white'
+				: 'border border-gray-800'
+		} rounded-lg px-5 sm:px-8 py-3.5 font-semibold`}
 		{...rest}
 	>
 		{text}
@@ -19,23 +21,31 @@ const Button = ({ _type = 'contained', text, ...rest }) => (
 )
 
 const Homepage = () => {
+	const [active, setActive] = useState(0)
+
 	return (
 		<Layout>
 			<main className='grid gap-24 lg:gap-28 pt-24 lg:pt-28'>
 				{/* landing section */}
 				<div className='banner_grid'>
-
 					<section id='banner-1' className='banner_card bg-gray-200 overflow-hidden'>
 						<div className='grid place-items-center w-full h-full relative'>
-							<Tween from={{ scale: '1.5', opacity: '0' }} to={{ scale: '1.0', opacity: '.25' }} duration={2}>
-
+							<Tween
+								from={{ scale: '1.5', opacity: '0' }}
+								to={{ scale: '1.0', opacity: '.25' }}
+								duration={2}
+							>
 								<img
 									src='/Gt_Website-06.png'
 									className='w-full h-full object-cover absolute top-0 left-0 rounded-2xl opacity-25 z-[0]'
 									alt=''
 								/>
 							</Tween>
-							<Tween from={{ y: '5rem', opacity: '0' }} to={{ y: '0rem', opacity: '1' }} duration={1.5}>
+							<Tween
+								from={{ y: '5rem', opacity: '0' }}
+								to={{ y: '0rem', opacity: '1' }}
+								duration={1.5}
+							>
 								<div className='grid gap-1.5 sm:gap-3.5 text-center px-5'>
 									<h3 className='text-xl text-gray-400'>One of the</h3>
 									<h2 className='text-2xl sm:text-3xl text-gray-500'>
@@ -47,13 +57,16 @@ const Homepage = () => {
 									<div className='flex items-center justify-center gap-3.5 sm:gap-5 mt-10 relative'>
 										<Button _type='outlined' text='Lorem ipsum' />
 										<Button text='Lorem ipsum' />
-										<img src='/Gt_Website-05.png' alt='' className='max-w-[100px] mr-1.5 h-auto absolute -top-28 z-[-1]' />
+										<img
+											src='/Gt_Website-05.png'
+											alt=''
+											className='max-w-[100px] mr-1.5 h-auto absolute -top-28 z-[-1]'
+										/>
 									</div>
 								</div>
 							</Tween>
 						</div>
 					</section>
-
 
 					<ScrollTrigger start='-300px center' end='bottom center'>
 						<Tween
@@ -78,7 +91,7 @@ const Homepage = () => {
 								</Fade>
 								<img
 									src={'/Gt_Website-07.png'}
-									className='w-[400px] h-auto object-contain absolute top-32 right-0'
+									className='max-w-[600px] w-full h-auto object-contain absolute top-28 right-5'
 									alt=''
 								/>
 							</section>
@@ -97,7 +110,9 @@ const Homepage = () => {
 							>
 								<Fade>
 									<section className='grid gap-5 place-items-start relative'>
-										<h2 className='text-3xl sm:text-4xl font-extrabold'>Camphor</h2>
+										<h2 className='text-3xl sm:text-4xl font-extrabold'>
+											Camphor
+										</h2>
 										<button className='bg-white hover:bg-opacity-100 transition-all bg-opacity-75 px-8 py-2.5 rounded-full'>
 											Show all
 										</button>
@@ -105,7 +120,7 @@ const Homepage = () => {
 										<Fade>
 											<img
 												src={'/Gt_Website-09.png'}
-												className='w-[400px] h-auto object-contain absolute top-12 md:top-[2.75vw] -right-16 md:-right-24'
+												className='max-w-[450px] w-full h-auto object-contain absolute top-12 md:top-[6.5vh] -right-16 md:-right-24'
 												alt=''
 											/>
 										</Fade>
@@ -144,11 +159,18 @@ const Homepage = () => {
 							to={{ x: '0px', opacity: 1 }}
 						>
 							<section className='banner_card bg-black relative overflow-hidden'>
-								<Image src={'/Gt_Website-37.jpg'} layout='fill' alt='' className='absolute opacity-50' />
+								<Image
+									src={'/Gt_Website-37.jpg'}
+									layout='fill'
+									alt=''
+									className='absolute opacity-50'
+								/>
 								<Fade>
 									<section className='grid gap-2 place-items-start'>
 										<p className='text-gray-500 text-2xl'>Sambrani</p>
-										<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>Dhoops</h2>
+										<h2 className='text-3xl sm:text-4xl font-extrabold text-white'>
+											Dhoops
+										</h2>
 										<button className='bg-white bg-opacity-25 text-white px-8 py-2.5 rounded-full mt-8 hover:bg-opacity-75 hover:text-black transition-all'>
 											Show all
 										</button>
@@ -180,7 +202,7 @@ const Homepage = () => {
 						scrub={0.35}
 						toggleActions='none'
 					>
-						<Tween from={{ x: '25px' }} to={{ x: '-25px' }} duration={2.5}>
+						<Tween from={{ x: '15px' }} to={{ x: '-15px' }} duration={2.5}>
 							<img
 								src='/Gt_Website-11.png'
 								className='max-w-xl w-full h-auto absolute -right-36 -bottom-32 lg:right-0 z-[-1]'
@@ -194,7 +216,7 @@ const Homepage = () => {
 						scrub={0.35}
 						toggleActions='none'
 					>
-						<Tween from={{ x: '30px' }} to={{ x: '-30px' }} duration={3}>
+						<Tween from={{ x: '20px' }} to={{ x: '-20px' }} duration={3}>
 							<img
 								src='/Gt_Website-13.png'
 								className='w-[100px] lg:w-[125px] h-auto absolute right-[12rem] lg:right-[27.5rem] -bottom-20 z-[-1]'
@@ -250,7 +272,9 @@ const Homepage = () => {
 						>
 							<section className='text-center'>
 								<h3 className='text-lg md:text-xl text-gray-400'>Product range</h3>
-								<h2 className='text-3xl md:text-4xl font-extrabold'>Our top sellers</h2>
+								<h2 className='text-3xl md:text-4xl font-extrabold'>
+									Our top sellers
+								</h2>
 							</section>
 						</Tween>
 					</ScrollTrigger>
@@ -295,10 +319,10 @@ const Homepage = () => {
 								<ScrollTrigger
 									start='-200px center'
 									end='bottom center'
-									scrub={1}
+									scrub={0.5}
 									toggleActions='none'
 								>
-									<Tween from={{ x: '50px' }} to={{ x: '0px' }}>
+									<Tween from={{ x: '25px' }} to={{ x: '0px' }}>
 										<div className='absolute w-full lg:-left-10 bottom-0 grid place-items-center'>
 											<img
 												src={'/Gt_Website-15.png'}
@@ -377,8 +401,12 @@ const Homepage = () => {
 												].map((item, i) => (
 													<button
 														key={i}
-														className={`text-white px-5 py-2.5 rounded ${i === 3 ? 'bg-white bg-opacity-25' : ''
-															}`}
+														className={`text-white px-5 py-2.5 rounded ${
+															i === active
+																? 'bg-white bg-opacity-25'
+																: ''
+														}`}
+														onClick={() => setActive(i)}
 													>
 														{item}
 													</button>

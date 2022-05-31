@@ -18,8 +18,9 @@ const Drawer = () => {
 	return (
 		<Menu as={React.Fragment}>
 			<Menu.Button
-				className={`absolute -top-5 right-0 px-3.5 py-1.5 z-[202] ${open ? 'text-white' : 'text-black'
-					} hover:bg-white hover:bg-opacity-5`}
+				className={`absolute -top-5 right-0 px-3.5 py-1.5 z-[202] ${
+					open ? 'text-white' : 'text-black'
+				} hover:bg-white hover:bg-opacity-5`}
 				onClick={toggleMenu}
 			>
 				<FontAwesomeIcon icon={open ? faTimes : faBars} />
@@ -47,6 +48,10 @@ const Drawer = () => {
 						{
 							title: 'About',
 							link: '/about',
+						},
+						{
+							title: 'About GT Group',
+							link: '/about-gt',
 						},
 						{
 							title: 'Top Selling Products',
