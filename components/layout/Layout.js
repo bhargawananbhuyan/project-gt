@@ -84,7 +84,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 											/>
 										</div>
 
-										<button className='bg-red-500 text-white flex items-center gap-x-5 px-7 py-3.5 text-left rounded-lg mt-10'>
+										<button className='bg-red-500 text-white flex items-center gap-x-5 px-7 py-3.5 text-left rounded-lg mt-10 shadow-xl hover:shadow-none transition-all'>
 											<span>Submit</span>
 											<FontAwesomeIcon icon={faArrowRight} />
 										</button>
@@ -149,7 +149,7 @@ const Layout = ({ children, footerBg = 'dark' }) => {
 										/>
 									</div>
 
-									<button className='bg-gray-500 text-white flex items-center gap-x-5 px-7 py-3.5 text-left rounded-lg mt-10'>
+									<button className='bg-gray-500 text-white flex items-center gap-x-5 px-7 py-3.5 text-left rounded-lg mt-10 shadow-xl hover:shadow-none transition-all'>
 										<span>Submit</span>
 										<FontAwesomeIcon icon={faArrowRight} />
 									</button>

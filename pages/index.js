@@ -250,7 +250,7 @@ const Homepage = () => {
 										Some of our key products have managed to establish
 										themselves as stand-alone brands too.
 									</p>
-									<button className='bg-gray-800 text-white px-10 py-3.5 rounded-xl font-semibold mt-5'>
+									<button className='bg-gray-800 text-white px-10 py-3.5 rounded-xl font-semibold mt-5 shadow-xl hover:shadow-none transition-all'>
 										Lorem ipsum
 									</button>
 								</Tween>
@@ -340,14 +340,23 @@ const Homepage = () => {
 				<TestimonialCarousel />
 
 				<div className='relative'>
-					<img
-						src='/Gt_Website-17.png'
-						className='w-[200px] lg:w-[250px] h-auto absolute -left-5 lg:left-24 -top-36 lg:-top-40'
-						alt=''
-					/>
+					<ScrollTrigger
+						start='-200px center'
+						end='bottom center'
+						scrub={0.5}
+						toggleActions='none'
+					>
+						<Tween from={{ rotation: -45 }} to={{ rotation: 0 }}>
+							<img
+								src='/Gt_Website-17.png'
+								className='w-[200px] lg:w-[250px] h-auto absolute -left-5 lg:left-24 -top-36 lg:-top-40'
+								alt=''
+							/>
+						</Tween>
+					</ScrollTrigger>
 					<img
 						src='/Gt_Website-18.png'
-						className='w-[250px] h-auto absolute -right-10 md:right-10 -bottom-56 md:-bottom-52 z-[-1]'
+						className='w-[250px] h-auto absolute -right-10 md:right-10 -bottom-56 md:-bottom-60 z-[-1]'
 						alt=''
 					/>
 					<div className='max-w-screen-xl mx-auto'>
