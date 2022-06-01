@@ -40,7 +40,13 @@ export default function Modal({ open, setOpen }) {
 										</button>
 									</div>
 
-									<section className='bg-gray-200 w-full h-[250px] md:h-[400px] rounded-xl' />
+									<section className='bg-gray-100 w-full h-[250px] md:h-[400px] rounded-xl flex items-center justify-center'>
+										<img
+											src={'/gt-p-1.jpg'}
+											alt=''
+											className='h-[80%] w-auto'
+										/>
+									</section>
 									<section className='flex gap-3.5 md:gap-5 flex-wrap'>
 										{Array.from(Array(5).keys()).map((i) => (
 											<section

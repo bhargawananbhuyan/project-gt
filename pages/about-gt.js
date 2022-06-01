@@ -4,67 +4,10 @@ import Layout from '../components/layout/Layout'
 import NumberGrid from '../components/layout/NumberGrid'
 
 const Last = () => {
-	// React.useEffect(() => {
-	// 	if (window === undefined) return
-
-	// 	const path1Ref = document.querySelector('#path__1')
-
-	// 	const length = path1Ref.getTotalLength()
-	// 	path1Ref.style.strokeDasharray = length
-	// 	path1Ref.style.strokeDashoffset = length
-
-	// 	document.addEventListener('scroll', () => {
-	// 		const scrollpercent =
-	// 			(document.body.scrollTop + document.documentElement.scrollTop) /
-	// 			(document.documentElement.scrollHeight - document.documentElement.clientHeight)
-
-	// 		const draw = length * scrollpercent * 80
-	// 		path1Ref.style.strokeDashoffset = length - draw
-	// 	})
-	// }, [])
-
-	// React.useEffect(() => {
-	// 	if (window === undefined) return
-
-	// 	const path2Ref = document.querySelector('#path__2')
-
-	// 	const length = path2Ref.getTotalLength()
-	// 	path2Ref.style.strokeDasharray = length
-	// 	path2Ref.style.strokeDashoffset = length
-
-	// 	document.addEventListener('scroll', () => {
-	// 		const scrollpercent =
-	// 			(document.body.scrollTop + document.documentElement.scrollTop) /
-	// 			(document.documentElement.scrollHeight - document.documentElement.clientHeight)
-
-	// 		const draw = length * scrollpercent * 10
-	// 		path2Ref.style.strokeDashoffset = draw - length
-	// 	})
-	// }, [])
-
-	// React.useEffect(() => {
-	// 	if (window === undefined) return
-
-	// 	const path3Ref = document.querySelector('#path__3')
-
-	// 	const length = path3Ref.getTotalLength()
-	// 	path3Ref.style.strokeDasharray = length
-	// 	path3Ref.style.strokeDashoffset = length
-
-	// 	document.addEventListener('scroll', () => {
-	// 		const scrollpercent =
-	// 			(document.body.scrollTop + document.documentElement.scrollTop) /
-	// 			(document.documentElement.scrollHeight - document.documentElement.clientHeight)
-
-	// 		const draw = length * scrollpercent * 10
-	// 		path3Ref.style.strokeDashoffset = length - draw
-	// 	})
-	// }, [])
-
 	return (
 		<Layout footerBg='light'>
-			<div className='relative hidden xl:block bg-[#d82a44] py-16'>
-				<div className='top-14 -right-[45%] rotate-180 absolute w-full'>
+			<div className='relative hidden xl:block bg-[#d82a44] py-[4.5vw]'>
+				<div className='top-20 -right-[45%] rotate-180 absolute w-full'>
 					<svg
 						id='Layer_1'
 						data-name='Layer 1'
@@ -159,7 +102,7 @@ const Last = () => {
 							</section>
 						</section>
 					</div>
-					<div className='hidden xl:block relative py-10'>
+					<div className='hidden xl:block relative pt-10 pb-[6.5vw]'>
 						<div className='absolute w-full -left-[45%]'>
 							<svg
 								id='Layer_1'
@@ -191,7 +134,7 @@ const Last = () => {
 						))}
 					</div>
 
-					<div className='hidden xl:block relative -mt-36 pb-72'>
+					<div className='hidden xl:block relative -mt-[6.5vw] pb-[18vw]'>
 						<div className='absolute w-full -right-[45%] rotate-180'>
 							<svg
 								id='Layer_1'

@@ -11,12 +11,9 @@ const HomeProduct = () => {
 	const [showModal, setShowModal] = React.useState(false)
 
 	const btnRef = React.useRef()
-	// const imgRef = React.useRef()
+	const imgRef = React.useRef()
 	React.useEffect(() => {
-		if (
-			btnRef.current
-			// && imgRef.current
-		) {
+		if (btnRef.current && imgRef.current) {
 			if (isHovered) {
 				gsap.fromTo(
 					btnRef.current,
@@ -31,17 +28,17 @@ const HomeProduct = () => {
 						duration: 0.35,
 					}
 				)
-				// gsap.fromTo(
-				// 	imgRef.current,
-				// 	{
-				// 		opacity: 0,
-				// 		duration: 0.5,
-				// 	},
-				// 	{
-				// 		opacity: 1,
-				// 		duration: 0.5,
-				// 	}
-				// )
+				gsap.fromTo(
+					imgRef.current,
+					{
+						opacity: 0,
+						duration: 0.5,
+					},
+					{
+						opacity: 1,
+						duration: 0.5,
+					}
+				)
 			}
 		}
 	}, [isHovered])
@@ -62,12 +59,12 @@ const HomeProduct = () => {
 							style={{ transition: '2s ease' }}
 						>
 							<div className='w-full aspect-square rounded-lg bg-gray-100'>
-								{/* <img
-						ref={imgRef}
-						src={`/agri-${isHovered ? '15' : '13'}.png`}
-						width={225}
-						height={225}
-					/> */}
+								<img
+									ref={imgRef}
+									src={`/gt-p-${isHovered ? '1' : '2'}.jpg`}
+									width={225}
+									height={225}
+								/>
 							</div>
 							<div className='grid gap-y-2'>
 								<h3 className='text-gray-400 text-sm md:text-md'>Agarbatti</h3>
