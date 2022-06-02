@@ -231,7 +231,9 @@ const About = () => {
 					<section
 						key={i}
 						className='w-full aspect-square outline outline-1 outline-gray-300 bg-gray-100'
-					></section>
+					>
+						<img src={`/${i + 1}.jpg`} className='w-full h-full object-cover' />
+					</section>
 				))}
 			</div>
 		</Layout>
