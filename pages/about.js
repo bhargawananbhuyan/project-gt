@@ -232,7 +232,7 @@ const About = () => {
 						key={i}
 						className='w-full aspect-square outline outline-1 outline-gray-300 bg-gray-100'
 					>
-						<img src={`/${i + 1}.jpg`} className='w-full h-full object-cover' />
+						<img src={`/${i + 1}.jpg`} className='w-full h-full object-cover' alt='' />
 					</section>
 				))}
 			</div>
