@@ -3,7 +3,7 @@ import React from 'react'
 import { ScrollTrigger, Tween } from 'react-gsap'
 import Modal from '../layout/Modal'
 
-const HomeProduct = () => {
+const HomeProduct = ({ title, images }) => {
 	const [isHovered, setIsHovered] = React.useState(false)
 	const handleMouseOver = () => setIsHovered(true)
 	const handleMouseOut = () => setIsHovered(false)
@@ -61,14 +61,13 @@ const HomeProduct = () => {
 							<div className='w-full aspect-square rounded-lg bg-gray-100'>
 								<img
 									ref={imgRef}
-									src={`/gt-p-${isHovered ? '1' : '2'}.jpg`}
-									width={225}
-									height={225}
+									src={`/${isHovered ? images[1] : images[0]}`}
+									className='w-full h-full object-cover'
 								/>
 							</div>
 							<div className='grid gap-y-2'>
 								<h3 className='text-gray-400 text-sm md:text-md'>Agarbatti</h3>
-								<h2 className='md:text-xl font-extrabold'>Royal Lavendar</h2>
+								<h2 className='md:text-xl font-extrabold'>{title}</h2>
 							</div>
 							{isHovered && (
 								<button
@@ -83,7 +82,7 @@ const HomeProduct = () => {
 					</div>
 				</Tween>
 			</ScrollTrigger>
-			<Modal open={showModal} setOpen={setShowModal} />
+			<Modal open={showModal} setOpen={setShowModal} title={title} images={images} />
 		</>
 	)
 }

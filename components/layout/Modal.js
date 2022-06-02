@@ -1,10 +1,12 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 
-export default function Modal({ open, setOpen }) {
+export default function Modal({ open, setOpen, title, images }) {
 	const closeModal = () => setOpen(false)
+
+	const [image, setImage] = useState(images[0])
 
 	return (
 		<>
@@ -41,22 +43,25 @@ export default function Modal({ open, setOpen }) {
 									</div>
 
 									<section className='bg-gray-100 w-full h-[250px] md:h-[400px] rounded-xl flex items-center justify-center'>
-										<img
-											src={'/gt-p-1.jpg'}
-											alt=''
-											className='h-[80%] w-auto'
-										/>
+										<img src={image} alt='' className='h-[80%] w-auto' />
 									</section>
 									<section className='flex gap-3.5 md:gap-5 flex-wrap'>
-										{Array.from(Array(5).keys()).map((i) => (
+										{Array.from(Array(images.length).keys()).map((i) => (
 											<section
 												key={i}
-												className='w-[42px] h-[42px] md:h-[75px] md:w-[75px] bg-gray-200 rounded-lg'
-											/>
+												className='w-[42px] h-[42px] md:h-[75px] md:w-[75px] bg-gray-200 rounded-lg cursor-pointer overflow-hidden'
+												onClick={() => setImage(images[i])}
+											>
+												<img
+													src={images[i]}
+													alt=''
+													className='w-full h-full object-contain'
+												/>
+											</section>
 										))}
 									</section>
 									<section>
-										<h1 className='text-3xl font-extrabold'>Royal Lavendar</h1>
+										<h1 className='text-3xl font-extrabold'>{title}</h1>
 										<p className='text-lg mt-3.5 text-gray-400'>
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 											Duis nec nisl vel urna dictum tempus eu non mauris.

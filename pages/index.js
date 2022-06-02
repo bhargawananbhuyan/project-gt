@@ -6,6 +6,7 @@ import Layout from '../components/layout/Layout'
 import NumberGrid from '../components/layout/NumberGrid'
 import TestimonialCarousel from '../components/layout/TestimonialCarousel'
 import HomeProduct from '../components/products/HomeProduct'
+import axios from 'axios'
 
 const Button = ({ _type = 'contained', text, ...rest }) => (
 	<button
@@ -280,8 +281,41 @@ const Homepage = () => {
 					</ScrollTrigger>
 
 					<div className='landing_grid__3'>
-						{Array.from(Array(8).keys()).map((i) => (
-							<HomeProduct key={i} id={i} />
+						{[
+							{
+								title: '5 Star',
+								images: ['5star-1.jpg', '5star-2.jpg'],
+							},
+							{
+								title: 'Agarbatti',
+								images: ['agarbatti-1.jpg', 'agarbatti-2.jpg'],
+							},
+							{
+								title: 'Ashthivinayak',
+								images: ['ashthi-1.jpg', 'ashthi-2.jpg'],
+							},
+							{
+								title: 'Bhakti',
+								images: ['bhakti-1.jpg', 'bhakti-2.jpg'],
+							},
+							{
+								title: 'Black Pearl',
+								images: ['black-1.jpg', 'black-2.jpg'],
+							},
+							{
+								title: 'Chandan',
+								images: ['chandan-1.jpg', 'chandan-2.jpg'],
+							},
+							{
+								title: 'Flower Pot',
+								images: ['flower-1.jpg', 'flower-2.jpg'],
+							},
+							{
+								title: 'Gajini',
+								images: ['gajini-1.jpg', 'gajini-2.jpg'],
+							},
+						].map((item, i) => (
+							<HomeProduct key={i} id={i} title={item.title} images={item.images} />
 						))}
 					</div>
 				</div>
@@ -442,5 +476,22 @@ const Homepage = () => {
 		</Layout>
 	)
 }
+
+// export const getServerSideProps = async () => {
+// 	try {
+// 		const res = await axios.get('http://localhost:5000/products')
+// 		return {
+// 			props: {
+// 				products: res.data?.data,
+// 			},
+// 		}
+// 	} catch (error) {
+// 		return {
+// 			props: {
+// 				error: JSON.stringify(error),
+// 			},
+// 		}
+// 	}
+// }
 
 export default Homepage

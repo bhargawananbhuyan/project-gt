@@ -23,8 +23,9 @@ const Products = () => {
 				</div>
 
 				<div
-					className={`fixed inset-0 overflow-y-scroll hide-scrollbar left-0 -top-20 py-10 px-5 z-[201] lg:py-0 bg-white shadow-xl w-full ${showFilter ? 'grid' : 'hidden'
-						} lg:hidden col-start-1 col-end-1 mt-20 items-start`}
+					className={`fixed inset-0 overflow-y-scroll hide-scrollbar left-0 -top-20 py-10 px-5 z-[201] lg:py-0 bg-white shadow-xl w-full ${
+						showFilter ? 'grid' : 'hidden'
+					} lg:hidden col-start-1 col-end-1 mt-20 items-start`}
 				>
 					<div className='lg:hidden fixed bottom-8 right-8 z-[1]'>
 						<button
@@ -47,10 +48,7 @@ const Products = () => {
 											type={'checkbox'}
 											className='outline-none'
 										/>
-										<label
-											htmlFor={`agarbatti-${i + 1}`}
-											className='mt-[-3px]'
-										>
+										<label htmlFor={`agarbatti-${i + 1}`} className='mt-[-3px]'>
 											Variation name #{i + 1}
 										</label>
 									</section>
@@ -67,10 +65,7 @@ const Products = () => {
 											type={'checkbox'}
 											className='outline-none'
 										/>
-										<label
-											htmlFor={`sambrani-${i + 1}`}
-											className='mt-[-3px]'
-										>
+										<label htmlFor={`sambrani-${i + 1}`} className='mt-[-3px]'>
 											Variation name #{i + 1}
 										</label>
 									</section>
@@ -104,10 +99,7 @@ const Products = () => {
 											type={'checkbox'}
 											className='outline-none'
 										/>
-										<label
-											htmlFor={`camphor-${i + 1}`}
-											className='mt-[-3px]'
-										>
+										<label htmlFor={`camphor-${i + 1}`} className='mt-[-3px]'>
 											Variation name #{i + 1}
 										</label>
 									</section>
@@ -210,8 +202,46 @@ const Products = () => {
 							</button>
 						</section>
 						<div className='products__grid mt-10'>
-							{Array.from(Array(12).keys()).map((i) => (
-								<HomeProduct key={i} />
+							{[
+								{
+									title: '5 Star',
+									images: ['5star-1.jpg', '5star-2.jpg'],
+								},
+								{
+									title: 'Agarbatti',
+									images: ['agarbatti-1.jpg', 'agarbatti-2.jpg'],
+								},
+								{
+									title: 'Ashthivinayak',
+									images: ['ashthi-1.jpg', 'ashthi-2.jpg'],
+								},
+								{
+									title: 'Bhakti',
+									images: ['bhakti-1.jpg', 'bhakti-2.jpg'],
+								},
+								{
+									title: 'Black Pearl',
+									images: ['black-1.jpg', 'black-2.jpg'],
+								},
+								{
+									title: 'Chandan',
+									images: ['chandan-1.jpg', 'chandan-2.jpg'],
+								},
+								{
+									title: 'Flower Pot',
+									images: ['flower-1.jpg', 'flower-2.jpg'],
+								},
+								{
+									title: 'Gajini',
+									images: ['gajini-1.jpg', 'gajini-2.jpg'],
+								},
+							].map((item, i) => (
+								<HomeProduct
+									key={i}
+									id={i}
+									title={item.title}
+									images={item.images}
+								/>
 							))}
 						</div>
 					</div>
