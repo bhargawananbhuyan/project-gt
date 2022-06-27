@@ -2,8 +2,9 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import { subCategories } from '../../utils/constants'
 
-export default function Modal({ open, setOpen, title, images }) {
+export default function Modal({ open, setOpen, title, images, description, subCategory }) {
 	const closeModal = () => setOpen(false)
 
 	const [image, setImage] = useState(images[0])
@@ -61,18 +62,11 @@ export default function Modal({ open, setOpen, title, images }) {
 										))}
 									</section>
 									<section>
+										<div className='my-2.5 text-gray-400'>
+											{subCategories[subCategory]}
+										</div>
 										<h1 className='text-3xl font-extrabold'>{title}</h1>
-										<p className='text-lg mt-3.5 text-gray-400'>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Duis nec nisl vel urna dictum tempus eu non mauris.
-											Integer ut lectus a ante congue vehicula. Aliquam
-											eleifend elit sem, vitae condimentum nisl tincidunt vel.
-											Nullam libero lacus, facilisis sed cursus at, finibus
-											sit amet arcu. Donec malesuada libero non dolor
-											venenatis, vel suscipit sapien tristique. Suspendisse
-											potenti. Etiam ultrices lacus vel libero convallis, et
-											euismod nibh volutpat.
-										</p>
+										<p className='text-lg mt-5 text-gray-400'>{description}</p>
 									</section>
 									<div className='flex gap-x-2.5'>
 										<button className='px-8 py-3.5 bg-black text-white rounded font-semibold'>

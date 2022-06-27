@@ -1,10 +1,12 @@
 import { faFilter } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import axios from 'axios'
 import React from 'react'
 import Layout from '../components/layout/Layout'
 import HomeProduct from '../components/products/HomeProduct'
+import { productsAPIService } from '../utils/constants'
 
-const Products = () => {
+const Products = ({ products }) => {
 	const [showFilter, setShowFilter] = React.useState(false)
 
 	return (
@@ -202,53 +204,36 @@ const Products = () => {
 							</button>
 						</section>
 						<div className='products__grid mt-10'>
-							{[
-								{
-									title: '5 Star',
-									images: ['5star-1.jpg', '5star-2.jpg'],
-								},
-								{
-									title: 'Agarbatti',
-									images: ['agarbatti-1.jpg', 'agarbatti-2.jpg'],
-								},
-								{
-									title: 'Ashthivinayak',
-									images: ['ashthi-1.jpg', 'ashthi-2.jpg'],
-								},
-								{
-									title: 'Bhakti',
-									images: ['bhakti-1.jpg', 'bhakti-2.jpg'],
-								},
-								{
-									title: 'Black Pearl',
-									images: ['black-1.jpg', 'black-2.jpg'],
-								},
-								{
-									title: 'Chandan',
-									images: ['chandan-1.jpg', 'chandan-2.jpg'],
-								},
-								{
-									title: 'Flower Pot',
-									images: ['flower-1.jpg', 'flower-2.jpg'],
-								},
-								{
-									title: 'Gajini',
-									images: ['gajini-1.jpg', 'gajini-2.jpg'],
-								},
-							].map((item, i) => (
-								<HomeProduct
-									key={i}
-									id={i}
-									title={item.title}
-									images={item.images}
-								/>
-							))}
+							{products?.length > 0 ? (
+								products?.map((item, i) => (
+									<HomeProduct
+										key={i}
+										id={i}
+										title={item.name}
+										images={item.images}
+										category={item.category}
+										subCategory={item.subCategory}
+										description={item.description}
+									/>
+								))
+							) : (
+								<div className='text-base'>No product exists.</div>
+							)}
 						</div>
 					</div>
 				</div>
 			</div>
 		</Layout>
 	)
+}
+
+export const getServerSideProps = async () => {
+	const res = await productsAPIService.get('/')
+	return {
+		props: {
+			products: res.data?.data,
+		},
+	}
 }
 
 export default Products

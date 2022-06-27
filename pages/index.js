@@ -7,6 +7,7 @@ import NumberGrid from '../components/layout/NumberGrid'
 import TestimonialCarousel from '../components/layout/TestimonialCarousel'
 import HomeProduct from '../components/products/HomeProduct'
 import axios from 'axios'
+import { productsAPIService } from '../utils/constants'
 
 const Button = ({ _type = 'contained', text, ...rest }) => (
 	<button
@@ -21,7 +22,7 @@ const Button = ({ _type = 'contained', text, ...rest }) => (
 	</button>
 )
 
-const Homepage = () => {
+const Homepage = ({ products }) => {
 	const [active, setActive] = useState(0)
 
 	return (
@@ -281,41 +282,16 @@ const Homepage = () => {
 					</ScrollTrigger>
 
 					<div className='landing_grid__3'>
-						{[
-							{
-								title: '5 Star',
-								images: ['5star-1.jpg', '5star-2.jpg'],
-							},
-							{
-								title: 'Agarbatti',
-								images: ['agarbatti-1.jpg', 'agarbatti-2.jpg'],
-							},
-							{
-								title: 'Ashthivinayak',
-								images: ['ashthi-1.jpg', 'ashthi-2.jpg'],
-							},
-							{
-								title: 'Bhakti',
-								images: ['bhakti-1.jpg', 'bhakti-2.jpg'],
-							},
-							{
-								title: 'Black Pearl',
-								images: ['black-1.jpg', 'black-2.jpg'],
-							},
-							{
-								title: 'Chandan',
-								images: ['chandan-1.jpg', 'chandan-2.jpg'],
-							},
-							{
-								title: 'Flower Pot',
-								images: ['flower-1.jpg', 'flower-2.jpg'],
-							},
-							{
-								title: 'Gajini',
-								images: ['gajini-1.jpg', 'gajini-2.jpg'],
-							},
-						].map((item, i) => (
-							<HomeProduct key={i} id={i} title={item.title} images={item.images} />
+						{products?.slice(0, 8).map((item, i) => (
+							<HomeProduct
+								key={i}
+								id={i}
+								title={item.name}
+								images={item.images}
+								category={item.category}
+								subCategory={item.subCategory}
+								description={item.description}
+							/>
 						))}
 					</div>
 				</div>
@@ -477,21 +453,13 @@ const Homepage = () => {
 	)
 }
 
-// export const getServerSideProps = async () => {
-// 	try {
-// 		const res = await axios.get('http://localhost:5000/products')
-// 		return {
-// 			props: {
-// 				products: res.data?.data,
-// 			},
-// 		}
-// 	} catch (error) {
-// 		return {
-// 			props: {
-// 				error: JSON.stringify(error),
-// 			},
-// 		}
-// 	}
-// }
+export const getServerSideProps = async () => {
+	const res = await productsAPIService.get('/')
+	return {
+		props: {
+			products: res.data?.data,
+		},
+	}
+}
 
 export default Homepage

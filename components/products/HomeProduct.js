@@ -1,9 +1,10 @@
 import { gsap } from 'gsap'
 import React from 'react'
 import { ScrollTrigger, Tween } from 'react-gsap'
+import { subCategories } from '../../utils/constants'
 import Modal from '../layout/Modal'
 
-const HomeProduct = ({ title, images }) => {
+const HomeProduct = ({ title, images, category, subCategory, description }) => {
 	const [isHovered, setIsHovered] = React.useState(false)
 	const handleMouseOver = () => setIsHovered(true)
 	const handleMouseOut = () => setIsHovered(false)
@@ -61,12 +62,14 @@ const HomeProduct = ({ title, images }) => {
 							<div className='w-full aspect-square rounded-lg bg-gray-100'>
 								<img
 									ref={imgRef}
-									src={`/${isHovered ? images[1] : images[0]}`}
+									src={isHovered ? images[1] : images[0]}
 									className='w-full h-full object-cover'
 								/>
 							</div>
 							<div className='grid gap-y-2'>
-								<h3 className='text-gray-400 text-sm md:text-md'>Agarbatti</h3>
+								<h3 className='text-gray-400 text-sm md:text-md'>
+									{subCategories[subCategory]}
+								</h3>
 								<h2 className='md:text-xl font-extrabold'>{title}</h2>
 							</div>
 							{isHovered && (
@@ -82,7 +85,14 @@ const HomeProduct = ({ title, images }) => {
 					</div>
 				</Tween>
 			</ScrollTrigger>
-			<Modal open={showModal} setOpen={setShowModal} title={title} images={images} />
+			<Modal
+				open={showModal}
+				setOpen={setShowModal}
+				title={title}
+				images={images}
+				description={description}
+				subCategory={subCategory}
+			/>
 		</>
 	)
 }
